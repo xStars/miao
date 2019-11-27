@@ -32,7 +32,7 @@
       margin-bottom: 20px;
     }
 
-    div:not([id="d1"]) {
+    #d1 div:not([id="d1"]) {
       width: 174px;
       height: 34px;
       border: 3px solid;
@@ -45,12 +45,16 @@
       background-color: red;
     }
 
-    div:nth-child(3n+2) {
+    .d2 span:hover {
+      background-color: red;
+    }
+
+    #d1 div:nth-child(3n+2) {
       margin-left: 210px;
       margin-top: -40px;
     }
 
-    div:nth-child(3n+3) {
+    #d1 div:nth-child(3n+3) {
       margin-left: 420px;
       margin-top: -40px;
     }
@@ -69,6 +73,25 @@
     .p5 {
       background-color: rgb(238, 138, 238);
       text-align: center;
+    }
+
+    span {
+      display: inline-block;
+      background-color: pink;
+      border: 3px solid black;
+      line-height: 40px;
+      width: 180px;
+      text-align: center;
+      vertical-align: top;
+      padding-right: 0px;
+      margin-bottom: 15px;
+    }
+
+
+    .d2 {
+      width: 600px;
+      vertical-align: auto;
+      margin: auto;
     }
   </style>
 
@@ -93,6 +116,13 @@
     <div>产品</div>
     <div>产品</div>
   </div>
+  <div class="d2">
+    <span>宽180高40(包含边框)</span><span>产品</span><span>产品</span>
+    <span>水平间隙30px</span><span>5</span><span>6</span>
+    <span>垂直间隙15px</span><span>8</span><span>9</span>
+    <span>边框宽度3px</span><span>11</span><span>12</span>
+  </div>
+
   <p class="p3">link</p>
   <p class="p3">link</p>
   <p class="p3">link</p>
