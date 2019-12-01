@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .a1 {
+      position: relative;
+      border: 1px solid red;
+      height: 100px;
+      ;
+      width: 100px;
+    }
+
+    .a2 {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 35px;
+      height: 35px;
+      background-color: red;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .b1 {
+      height: 100px;
+      border: solid 1px green;
+    }
+
+    .b2 {
+      position: relative;
+      top: 50%;
+      transform: translate(50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="a1">
+    <div class="a2">绝对居中</div>
+  </div>
+  <div class="b1">
+    <div class="b2">相对居中</div>
+  </div>
+</body>
+
+</html>
