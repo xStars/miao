@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    html,
+    body {
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+    }
+
+    nav {
+      position: absolute;
+      top: 40px;
+      background-color: #3463c2;
+      min-width: 600px;
+    }
+
+    li:hover {
+      background-color: #2152a6;
+    }
+
+    nav>* {
+      display: inline-block;
+      padding: 0px 10px 0px 10px;
+    }
+
+    ul {
+      font-size: 0px;
+      padding: 0px;
+    }
+
+    li {
+      font-size: 14px;
+      list-style: none;
+      line-height: 30px;
+      padding: 10px;
+    }
+
+    li:last-child {
+      border-right: 1px solid #3774c1;
+    }
+
+    .l7::after {
+      content: "";
+      position: absolute;
+      background-color: transparent;
+      border: 5px solid #f09436;
+      border-color: #f09436 transparent transparent #f09436;
+      left: 170px;
+      top: 15px;
+    }
+
+    .l7::before {
+      content: "低价促";
+      position: absolute;
+      background-color: #f09436;
+      color: white;
+      font-size: 9px;
+      left: 170px;
+      top: -15px;
+    }
+
+    li[data-tip]::before {
+      content: attr(data-tip);
+      position: absolute;
+      background-color: #f09436;
+      color: white;
+      font-size: 9px;
+      left: 280px;
+      top: -15px;
+    }
+
+    .l4::after {
+      content: "";
+      position: absolute;
+      background-color: transparent;
+      border: 5px solid #f09436;
+      border-color: #f09436 transparent transparent #f09436;
+      left: 280px;
+      top: 15px;
+    }
+
+
+    a:link {
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    a:visited {
+      color: white;
+    }
+  </style>
+  <title>艺龙导航</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li class="l1"><a href="http://www.elong.com/">首页</a></li>
+      </ul>
+      <ul>
+        <li class="l2"><a href="http://hotel.elong.com/">国内酒店</a></li>
+      </ul>
+      <ul>
+        <li class="l3" data-tip="低价促"><a href="http://ihotel.elong.com/">海外酒店</a></li>
+      </ul>
+      <ul>
+        <li class="l4" data-tip="新升级"><a href="https://www.ly.com/flights/home?p=465">国内•国际酒店</a></li>
+      </ul>
+      <ul>
+        <li class="l5"><a href="http://m.elongstatic.com/static/webapp/train/website/railway.html">火车票</li></a>
+      </ul>
+      <ul>
+        <li class="l6"><a href="http://bus.elong.com/ly">汽车票</a></li>
+      </ul>
+      <ul>
+        <li class="l7"><a href="https://tmc.ly.com/">商旅</a></li>
+      </ul>
+    </nav>
+  </header>
+</body>
+
+</html>
