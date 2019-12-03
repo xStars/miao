@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>css-menu</title>
+  <style>
+    ul {
+      list-style: none;
+      background-color: black;
+      min-width: 200px;
+      font-size: 12px;
+      line-height: 12px;
+
+    }
+
+    * {
+      color: white;
+    }
+
+    ul li {
+      position: relative;
+      white-space: nowrap;
+      text-align: left;
+    }
+
+    ul.menu>li {
+      display: inline-block;
+      padding: 10px;
+    }
+
+    ul ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+
+    ul ul ul {
+      top: 0%;
+      left: 100%;
+    }
+
+    li:hover>ul {
+      display: block;
+    }
+  </style>
+</head>
+<ul class="menu">
+  <li>文件<ul>
+      <li>新建文件</li>
+      <li>新建窗口</li>
+      <li>
+        <hr>
+      </li>
+      <li>打开...</li>
+      <li>打开工作区</li>
+      <li>打开最近的文件
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;
+        <ul>
+          <li>1.html</li>
+          <li>2.html</li>
+          <li>3.html</li>
+        </ul>
+      </li>
+      <li>将文件夹添加到工作区...</li>
+      <li>
+        <hr>
+      </li>
+      <li>保存</li>
+      <li>另存为...</li>
+      <li>全部保存</li>
+      <li>
+        <hr>
+      </li>
+      <li>自动保存</li>
+      <li>
+        <hr>
+      </li>
+      <li>还原文件</li>
+      <li>关闭编辑器</li>
+      <li>关闭文件夹</li>
+      <li>关闭窗口</li>
+    </ul>
+  </li>
+  <li>编辑
+    <ul>
+      <li>撤销</li>
+      <li>恢复</li>
+      <li>剪切</li>
+      <li>复制</li>
+    </ul>
+  </li>
+  <li>选择
+    <ul>
+      <li>全选</li>
+      <li>展开选定内容</li>
+      <li>缩小选定范围</li>
+      <li>
+        <hr>
+      </li>
+      <li>向上复制行</li>
+    </ul>
+  </li>
+</ul>
+
+<body>
+
+</body>
+
+</html>
