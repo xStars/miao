@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 150px;
+      height: 150px;
+      box-sizing: border-box;
+    }
+
+    th {
+      border: 4px inset blue;
+
+    }
+
+    th:hover {
+      border: 4px solid red;
+      position: relative;
+      z-index: 2;
+
+    }
+
+    .ds-table {
+      display: table;
+      border-collapse: collapse;
+      width: 150px;
+      height: 150px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .ds-tr {
+      display: table-row;
+    }
+
+    .ds-th {
+      display: table-cell;
+      vertical-align: middle;
+      border: 4px inset blue;
+    }
+
+    .ds-th:hover {
+      border: 4px solid red;
+    }
+
+    .d10 {
+      position: relative;
+    }
+
+    .d10 div {
+      width: 50px;
+      height: 50px;
+      box-sizing: border-box;
+      border: 4px solid blue;
+      position: relative;
+      text-align: center;
+    }
+
+    .d10 div:nth-child(n+4):nth-child(-n+6) {
+      position: relative;
+      left: 46px;
+      top: -150px;
+    }
+
+    .d10 div:nth-child(n+7):nth-child(-n+9) {
+      position: relative;
+      left: 92px;
+      top: -300px;
+    }
+
+    .d10 div:hover {
+      border-color: red;
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>table</h1>
+  <table>
+    <tr>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+    <tr>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+    </tr>
+    <tr>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+    </tr>
+  </table>
+  <hr>
+  <h1>display:table</h1>
+  <div class="ds-table">
+    <div class="ds-tr">
+      <div class="ds-th">1</div>
+      <div class="ds-th">2</div>
+      <div class="ds-th">3</div>
+    </div>
+    <div class="ds-tr">
+      <div class="ds-th">4</div>
+      <div class="ds-th">5</div>
+      <div class="ds-th">6</div>
+    </div>
+    <div class="ds-tr">
+      <div class="ds-th">7</div>
+      <div class="ds-th">8</div>
+      <div class="ds-th">9</div>
+    </div>
+  </div>
+  <hr>
+  <h1>定位</h1>
+  <div class="d10">
+    <div class="d1">1</div>
+    <div class="d2">4</div>
+    <div class="d3">7</div>
+    <div class="d4">2</div>
+    <div class="d5">5</div>
+    <div class="d6">8</div>
+    <div class="d7">3</div>
+    <div class="d8">6</div>
+    <div class="d9">9</div>
+  </div>
+
+</body>
+
+</html>
