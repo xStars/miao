@@ -1,0 +1,126 @@
+html {
+  font-family: sans-serif;
+}
+body {
+  margin: 0;
+}
+.site-topbar {
+  color: #b0b0b0;
+  background-color: #333;
+  font-size: 12px;
+  height: 40px;
+  position: relative;
+}
+.site-topbar a {
+  color: #b0b0b0;
+  line-height: 40px;
+  display: inline-block;
+  text-decoration: none;
+}
+.site-topbar a:hover {
+  color: white;
+}
+/* 居中site-topbar里的topbar */
+.site-topbar .container {
+  width: 1226px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-topbar .sep {
+  font-weight: 400;
+  color: #424242;
+  margin: 3.6px;
+}
+.topbar-nav {
+  position: relative;
+}
+.topbar-down .appcode {
+  position: absolute;
+  display: none;
+  top: 40px;
+  left: 520px;
+  width: 124px;
+  /* height: 147px; */
+  height: 0px;
+  margin-top: 0px;
+  text-align: center;
+  background: url(https://i1.mifile.cn/f/i/17/appdownload/download.png) no-repeat center center;
+  background-size: 90px 90px;
+  vertical-align: bottom;
+  padding: 120px 20px 20px 20px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 1px 5px #aaa;
+}
+.topbar-down::before{
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 25px;
+  left: 46.5%;
+  border: 8px solid;
+  border-color: transparent transparent #fff transparent;
+  /* box-shadow: 0 1px 5px #aaa; */
+  z-index: 40;
+  visibility: hidden;
+}
+
+.topbar-down:hover .appcode {
+  display: block;
+  height: 148px;
+  opacity: 1;
+  transition: .6s;
+}
+.topbar-down:hover::before {
+  visibility: visible;
+}
+
+
+
+.topbar-cart .icon-cart {
+  background: url(../icon/icon-cart.png) no-repeat center;
+  width: 18px;
+  height: 14px;
+  display: inline-block;
+  background-size: 110%;
+  vertical-align: text-top;
+}
+.site-topbar .topbar-cart {
+  background-color: #424242;
+  float: right;
+  position: relative;
+  /* top: 0px;
+  right: -1106px; */
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-top: -40px;
+}
+.topbar-user-info {
+  position: relative;
+  float: right;
+  /* top: 0px;
+  right: -955px; */
+  overflow: hidden;
+  margin-right: 145px;
+  margin-top: -40px;
+  line-height: 40px;
+}
+.topbar-user-info a {
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.site-topbar .topbar-cart a{
+  color: #b0b0b0;
+}
+.site-topbar .topbar-cart:hover{
+background-color: white;
+}
+.site-topbar .topbar-cart a:hover{
+  color: #ff6700;
+}
