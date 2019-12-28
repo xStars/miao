@@ -162,9 +162,197 @@ console.log(result);
   console.log(result)
 </script>
 
-<script id="ch0104/01">
+<script id="ch0104/01" type="x">
   var n = Number(prompt("n"))
   if (n > 0) { console.log("positive") }
   else if (n === 0) { console.log("zero") }
   else if (n < 0) { console.log("negative") }
+</script>
+
+<script id="ch0104/02" type="x">
+  var a = Number(prompt(""))
+  // console.log(Math.abs(a))
+  if (a > 0) { console.log(a.toFixed(2)) }
+  else if (a < 0) { console.log(- a.toFixed(2)) }
+</script>
+
+<script id="ch0104/03" type="x">
+  var n = Number(prompt(""))
+  if (n % 2 == 0) { console.log("even") }
+  else { console.log("odd") }
+</script>
+
+<script id="ch0104/04" type="x">
+  var a = String(prompt()).charCodeAt()
+  console.log(a);
+  if (a % 2 == 0) { console.log("NO") }
+  else { console.log("YES") }
+</script>
+
+<script id="ch0104/05" type="x">
+var x = Number(prompt())
+var y = Number(prompt())
+if (x > y )
+{console.log(">")}
+else if (x < y)
+{
+  console.log("<")
+}
+else {
+  console.log("=")
+}
+</script>
+
+<script id="ch0104/06" type="x">
+  var a = Number(prompt())
+  if (a >= 10 && a <= 99) { console.log("1") }
+  else {
+    console.log("0")
+  }
+</script>
+
+<script id="ch0104/07" type="x">
+var lucky = Number(prompt())
+var encourage = Number(prompt())
+if (lucky >= 10 || encourage >= 20) {
+  console.log(1)
+}
+else {
+  console.log(0)
+}
+</script>
+
+<script id="ch0104/08" type="x">
+  var n = Number(prompt())
+  if (n % 3 == 0 && n % 5 == 0) {
+    console.log("YES")
+  }
+  else
+  {
+    console.log("NO")
+  }
+</script>
+
+<script id="ch0104/09" type="x">
+  var n = Number(prompt())
+  if (n % 3 == 0 && n % 5 == 0 && n % 7 == 0) {
+    console.log("3 5 7")
+  }
+  else if ((n % 3 == 0 && n % 5 == 0) || (n % 3 == 0 && n % 7 == 0) || (n % 5 == 0 && n % 7 == 0)) {
+    if (n % 3 == 0 && n % 5 == 0) {
+      console.log("3 5")
+    }
+    else if (n % 3 == 0 && n % 7 == 0) {
+      console.log("3 7")
+    }
+    else {
+      console.log("5 7")
+    }
+  }
+  else if (n % 3 == 0 || n % 5 == 0 || n % 7 == 0) {
+    if (n % 3 == 0) {
+      console.log(3)
+    } else if (n % 5 == 0) {
+      console.log(5)
+    }
+    else {
+      console.log(7)
+    }
+  }
+  else {
+    console.log("n")
+  }
+</script>
+
+<script id="ch0104/10" type="x">
+  var chinese = Number(prompt())
+  var maths = Number(prompt())
+  if (chinese < 60 || maths < 60) {
+    console.log(1)
+  } else {
+    console.log(0)
+  }
+</script>
+
+<script id="ch0104/11" type="x">
+  var date = Number(prompt( ))
+  if (date == 1 || date == 3 || date== 5) {
+    console.log("NO")
+  } else {
+    console.log("YES")
+  }
+</script>
+
+<script id="ch0104/12" type="x">
+  var distance = Number(prompt())
+  var use_bike_time = 23 + 27
+  var onFoot_speed = 1.2
+  var bike_speed = 3
+  if (distance / onFoot_speed < distance / bike_speed + use_bike_time) {
+    console.log("Walk")
+  }
+  else if (distance / onFoot_speed > distance / bike_speed + use_bike_time) {
+    console.log("Bike")
+  }
+  else {
+    console.log("All")
+  }
+</script>
+
+<script id="ch0104/13" type="x">
+  var x = Number(prompt())
+  var y = null
+  if (x >= 0 && x < 5) {
+    y = - x + 2.5
+  } else if (x >= 5 && x < 10) {
+    y = 2 - 1.5 * (x - 3) * (x - 3)
+  }
+  else {
+    y = x / (2 - 1.5)
+  }
+  console.log(y.toFixed(3))
+</script>
+
+<script id="ch0104/14" type="x">
+var weight =  Number(prompt())
+var lsemergency = String(prompt())
+var overweight = (weight - 1000 ) / 500
+// 加急状态
+if (lsemergency == "y") {
+  if (weight <= 1000) {
+    cost = 8 + 5
+  }
+  else {
+    if (overweight < 1) {
+      // 超重不满500 重置为1
+    overweight = 1
+    }
+    cost = 8 + 5 + overweight * 4
+  }
+}
+// 不加急
+else {
+  if (weight <= 1000) {
+    cost = 8
+  }
+  else {
+    if (overweight < 1) {
+      // 超重不满500 重置为1
+    overweight = 1
+    }
+    cost = 8  + overweight * 4
+  }
+}
+console.log(cost)
+</script>
+
+<script id="ch0104/15" type="x">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = Number(prompt())
+  console.log(Math.max(a, b, c))
+</script>
+
+<script>
+
 </script>
