@@ -593,3 +593,28 @@ console.log(cost)
   console.log(sum);
 
 </script>
+
+<script id="ch0105/10" type="x">
+  var time = Number(prompt())
+  var date = 0
+  var count = 0
+  var one_count = 0
+  var five_count = 0
+  var ten_count = 0
+  while ( count < time) {
+    count = count + 1
+    date = Number(prompt())
+    if (date == 1) {
+      one_count = one_count + 1
+    }
+    if (date == 5) {
+      five_count = five_count + 1
+    }
+    if (date == 10) {
+      ten_count = ten_count +1
+    }
+  }
+  console.log(one_count);
+  console.log(five_count);
+  console.log(ten_count);
+</script>
