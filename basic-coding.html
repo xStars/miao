@@ -353,6 +353,100 @@ console.log(cost)
   console.log(Math.max(a, b, c))
 </script>
 
-<script>
+<script id="ch0104/16" type="x">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = Number(prompt())
+   if (a + b > c) {
+     console.log("yes")
+   }
+   else {
+     console.log("no")
+   }
+</script>
 
+<script id="ch0104/17" type="x">
+  var year = Number(prompt())
+  if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+    console.log("Y")
+  }
+  else {
+    console.log("N")
+  }
+</script>
+
+<script id="ch0104/18" type="x">
+  var x = Number(prompt())
+  var y = Number(prompt())
+  if ((x >= -1 && x <= 1) && (y >= -1 && y <= 1)) {
+    console.log("yes")
+  }
+  else {
+    console.log("no")
+  }
+</script>
+
+<script id="ch0104/19" type="x">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var operate =String(prompt())
+  var result = null
+  if (operate == "+") {
+    result = a + b
+  }
+  else if (operate == "-") {
+    result = a - b
+  }
+  else if (operate == "*") {
+    result = a * b
+  }
+  else if (operate == "/") {
+    result = a / b
+  }
+  else {
+    result = "Invalid operator!"
+  }
+  console.log(result)
+</script>
+
+<script id="ch0104/20" type="x">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = Number(prompt())
+  var x1 = (- b + Math.sqrt(b * b - 4 * a * c))/ 2 * a
+  var x2 = (- b - Math.sqrt(b * b - 4 * a * c))/ 2 * a
+  // if (x1 = x2) {
+  //   console.log("x1=x2=" + x1.toFixed(5));
+  // }
+  // else if (x1 > x2) {
+  //   console.log("x1=" + x1.toFixd(5) + ";" + "x2=" + x2.toFixd(5));
+  // }
+  // else
+  // {
+  //   console.log("x1=" + x1.toFixd(5) + ";" + "x2=" + x2.toFixd(5));
+  // }
+  if (b * b == 4 * a * c) {
+    console.log("x1=x2=" + x1.toFixed(5));
+  }
+  else if (b * b > 4 * a * c) {
+    console.log("x1=" + x1.toFixd(5) + ";" + "x2=" + x2.toFixd(5));
+  }
+  else
+  {
+    console.log("x1=" + x1.toFixd(5) + ";" + "x2=" + x2.toFixd(5));
+  }
+
+</script>
+
+<script id="ch0104/21" type="x">
+  var n = Number(prompt())
+  var x = Number(prompt())
+  var y = Number(prompt())
+  var result = n - (1 / x) * y
+  if ( result % 1 == 0) {
+    console.log(result);
+  }
+  else {
+    console.log(result -(result % 1));
+  }
 </script>
