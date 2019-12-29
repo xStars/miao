@@ -450,3 +450,146 @@ console.log(cost)
     console.log(result -(result % 1));
   }
 </script>
+
+<script id="ch0105/01" type="x">
+  var people = Number(prompt("People"))
+  var age = 0
+  var sum = 0
+  var count = 0
+  while (count < people) {
+    count = count + 1
+    age =  Number(prompt("socre"+count))
+    sum = age+sum
+  }
+  console.log((sum / people).toFixed(2));
+</script>
+
+<script id="ch0105/02" type="x">
+  var count = 0
+  var balance = 0
+  var sum = 0
+  var avg = 0
+  while (count < 12) {
+    count = count + 1
+    balance = Number(prompt(count+"月结余"))
+    sum = sum + balance
+  }
+  avg = sum / 12
+  console.log("$" + avg.toFixed(2));
+
+</script>
+
+<script id="ch0105/03" type="x">
+  var count = 0
+  var pcs = Number(prompt())
+  var date = 0
+  var sum = 0
+  var avg = 0
+  while (count < pcs) {
+    count = count + 1
+    date = Number(prompt("数据" + count))
+    sum = sum + date
+  }
+  avg = sum / pcs
+  console.log(avg.toFixed(4));
+
+</script>
+
+<script id="ch0105/04" type="x">
+  var count = 0
+  var pcs = Number(prompt())
+  var date = 0
+  var sum = 0
+  var avg = 0
+  while (count < pcs) {
+    count = count + 1
+    date = Number(prompt("数据" + count))
+    sum = sum + date
+  }
+  avg = sum / pcs
+  console.log(sum + " " + avg.toFixed(5));
+
+</script>
+
+<script id="ch0105/05" type="x">
+  var count = 0
+  var n = Number(prompt())
+  var score = 0
+  var max = 0
+  while (count < n) {
+    count = count + 1
+    score = Number(prompt())
+    if (max < score) {
+      max = score
+    }
+  }
+  console.log(max);
+
+</script>
+
+<script id="ch0105/06" type="x">
+  var count = 0
+  var n = Number(prompt())
+  var score = 0
+  var min = 0
+  var max = 0
+  while (count < n) {
+    count = count + 1
+    score = Number(prompt())
+    if (max < score) {
+      max = score
+    }
+    else if (min > score) {
+      min = score
+    }
+  }
+  console.log(max - min);
+</script>
+
+<script id="ch0105/07" type="x">
+  var count = 0
+  var n = Number(prompt())
+  var a = 0
+  var gold = 0
+  var b = 0
+  var silver = 0
+  var c = 0
+  var copper = 0
+  var sum = 0
+  while (count < n) {
+    count = count + 1
+    a = Number(prompt("第" + count + "天gold"))
+    gold = gold + a
+    b = Number(prompt("第" + count + "天silver"))
+    silver = silver + b
+    c = Number(prompt("第" + count + "天copper"))
+    copper = copper + c
+  }
+  sum = gold + silver + copper
+  console.log(gold + " " + silver + " " + copper + " " + sum);
+
+</script>
+
+<script id="ch0105/08" type="x">
+  var n = Number(prompt())
+  var angleSum = (n - 2) * 180
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var x = angleSum - a - b
+  console.log(x);
+
+</script>
+
+<script id="ch0105/09" type="x">
+  var min = Number(prompt("min"))
+  var max = Number(prompt("max"))
+  var sum = 0
+  while (min <= max) {
+    if (min % 2 != 0){
+      sum = sum + min
+    }
+    min = min +1
+  }
+  console.log(sum);
+
+</script>
