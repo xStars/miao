@@ -594,7 +594,7 @@ console.log(cost)
 
 </script>
 
-<script id="ch0105/10" type="x">
+<script id="ch0105/10" type="">
   var time = Number(prompt())
   var date = 0
   var count = 0
@@ -607,10 +607,10 @@ console.log(cost)
     if (date == 1) {
       one_count = one_count + 1
     }
-    if (date == 5) {
+    if (date % 5 == 0 && date % 10 !== 0) {
       five_count = five_count + 1
     }
-    if (date == 10) {
+    if (date % 10 == 0 && date % 5 !== 0) {
       ten_count = ten_count +1
     }
   }
