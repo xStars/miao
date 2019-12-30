@@ -687,7 +687,7 @@ console.log(cost)
 
 </script>
 
-<script id="ch0105/16" type="">
+<script id="ch0105/16" type="x">
   var N = Number(prompt())
   var K = Number(prompt()) / 100
   var deposit = 0
@@ -714,7 +714,7 @@ console.log(cost)
 <script id="ch0105/x17" type="x">
 </script>
 
-<script id="ch0105/x18" type="x">
+<script id="ch0105/x18" type="">
   var n = Number(prompt())
   var x = null
   var y = null
@@ -722,23 +722,21 @@ console.log(cost)
   {
     var a = Number(prompt())
     var b = Number(prompt())
-    if (count = 0) {
+    if (count == 0) {
       x = b / a * 100
     }
-    else {
+    else if (count > 0 ) {
       y = b / a * 100
-    }
 
-    if (y - x > 5) {
+      if (y - x > 5) {
       console.log("better");
-
-    }
-    else if (x - y > 5) {
+      }
+      else if (x - y > 5) {
       console.log("worse");
-    }
-    else {
+      }
+      else {
       console.log("same");
-
+      }
     }
   }
 </script>
