@@ -674,4 +674,71 @@ console.log(cost)
 
 </script>
 
-<script id="ch0105/15"></script>
+<script id="ch0105/15" type="x">
+  var R = Number(prompt("R")) / 100
+  var M = Number(prompt("M"))
+  var Y = Number(prompt("Y"))
+  var count = 0
+  while (count < Y) {
+    count = count + 1
+    M = M + ( M * R )
+  }
+  console.log(Math.floor(M));
+
+</script>
+
+<script id="ch0105/16" type="">
+  var N = Number(prompt())
+  var K = Number(prompt()) / 100
+  var deposit = 0
+  var HousePrices = 200
+  for (var count = 0; count < 20; count++)
+  {
+    deposit = deposit + N
+    if (count == 0) {
+          HousePrices = 200
+    }
+    else if (count > 0) {
+          HousePrices = HousePrices * ( 1 + K )
+    }
+    if (deposit >= HousePrices) {
+      console.log(count + 1);
+      break
+    }
+  }
+  if (count >= 20) {
+    console.log("Impossible");
+  }
+</script>
+
+<script id="ch0105/x17" type="x">
+</script>
+
+<script id="ch0105/x18" type="x">
+  var n = Number(prompt())
+  var x = null
+  var y = null
+  for (var count = 0 ; count < n ; count++)
+  {
+    var a = Number(prompt())
+    var b = Number(prompt())
+    if (count = 0) {
+      x = b / a * 100
+    }
+    else {
+      y = b / a * 100
+    }
+
+    if (y - x > 5) {
+      console.log("better");
+
+    }
+    else if (x - y > 5) {
+      console.log("worse");
+    }
+    else {
+      console.log("same");
+
+    }
+  }
+</script>
