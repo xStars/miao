@@ -413,28 +413,25 @@ console.log(cost)
   var a = Number(prompt())
   var b = Number(prompt())
   var c = Number(prompt())
-  var x1 = (- b + Math.sqrt(b * b - 4 * a * c))/ 2 * a
-  var x2 = (- b - Math.sqrt(b * b - 4 * a * c))/ 2 * a
-  // if (x1 = x2) {
-  //   console.log("x1=x2=" + x1.toFixed(5));
-  // }
-  // else if (x1 > x2) {
-  //   console.log("x1=" + x1.toFixd(5) + ";" + "x2=" + x2.toFixd(5));
-  // }
-  // else
-  // {
-  //   console.log("x1=" + x1.toFixd(5) + ";" + "x2=" + x2.toFixd(5));
-  // }
-  if (b * b == 4 * a * c) {
-    console.log("x1=x2=" + x1.toFixed(5));
+  var delta = b * b - 4 * a * c
+  var x1 = null
+  var x2 = null
+  if (delta > 0) {
+    x1 = (- b + Math.sqrt(b * b - 4 * a * c))/ (2 * a)
+    x2 = (- b - Math.sqrt(b * b - 4 * a * c))/ (2 * a)
+    console.log("x1=" + x1.toFixed(5)  + ";" + "x2=" + x2.toFixed(5));
   }
-  else if (b * b > 4 * a * c) {
-    console.log("x1=" + x1.toFixd(5) + ";" + "x2=" + x2.toFixd(5));
+  else if (delta == 0) {
+    var x = (- b + Math.sqrt(b * b - 4 * a * c))/ (2 * a)
+    console.log("x1=x2=" + x.toFixed(5));
   }
-  else
-  {
-    console.log("x1=" + x1.toFixd(5) + ";" + "x2=" + x2.toFixd(5));
+  else {
+    delta = -delta
+    x1 = (-b / 2 / a).toFixed(5) + "+" + (+Math.sqrt(delta) / 2 / a).toFixed(5) + "i"
+    x2 = (-b / 2 / a).toFixed(5) + "+" + (-Math.sqrt(delta) / 2 / a).toFixed(5) + "i"
+    console.log("x1=" + x1 + ";" + "x2=" + x2);
   }
+
 
 </script>
 
@@ -714,7 +711,7 @@ console.log(cost)
 <script id="ch0105/x17" type="x">
 </script>
 
-<script id="ch0105/18" type="">
+<script id="ch0105/18" type="x">
   var n = Number(prompt())
   var x = null
   var y = null
