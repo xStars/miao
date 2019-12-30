@@ -409,7 +409,7 @@ console.log(cost)
   console.log(result)
 </script>
 
-<script id="ch0104/20" type="x">
+<script id="ch0104/20" type="">
   var a = Number(prompt())
   var b = Number(prompt())
   var c = Number(prompt())
@@ -428,7 +428,7 @@ console.log(cost)
   else {
     delta = -delta
     x1 = (-b / 2 / a).toFixed(5) + "+" + (+Math.sqrt(delta) / 2 / a).toFixed(5) + "i"
-    x2 = (-b / 2 / a).toFixed(5) + "+" + (-Math.sqrt(delta) / 2 / a).toFixed(5) + "i"
+    x2 = (-b / 2 / a).toFixed(5) + "-" + (-Math.sqrt(delta) / 2 / a).toFixed(5) + "i"
     console.log("x1=" + x1 + ";" + "x2=" + x2);
   }
 
@@ -734,6 +734,30 @@ console.log(cost)
       else {
       console.log("same");
       }
+    }
+  }
+</script>
+
+<script id="ch0105/19" type="x">
+  var n =  Number(prompt())
+  for (var count = 0; count < n; count++){
+    var x = Number(prompt())
+    var y = Number(prompt())
+    var people = Number(prompt())
+    var c = Math.sqrt(Math.pow((0 - 30), 2) + Math.pow((0 - 40), 2))
+    time = (1 + 0.5) * people + ( c / 50 * 2 )
+  }
+  console.log(Math.ceil(time));
+
+</script>
+
+<script id="ch0105/20" type="">
+  var originalHeight = Number(prompt())
+  var ten_time_height = 0
+  var total = 0
+  for (var count = 0 ; count < 10; count++){
+    if (count == 0 ) {
+      total = total + 50
     }
   }
 </script>
