@@ -391,22 +391,28 @@ console.log(cost)
   var b = Number(prompt())
   var operate =String(prompt())
   var result = null
-  if (operate == "+") {
-    result = a + b
-  }
-  else if (operate == "-") {
-    result = a - b
-  }
-  else if (operate == "*") {
-    result = a * b
-  }
-  else if (operate == "/") {
-    result = a / b
-  }
-  else {
-    result = "Invalid operator!"
-  }
-  console.log(result)
+    if (operate == "+") {
+      result = a + b
+    }
+    else if (operate == "-") {
+      result = a - b
+    }
+    else if (operate == "*") {
+      result = a * b
+    }
+    else if (operate == "/") {
+      if (b != 0 ) {
+      result = a / b
+      }
+      else {
+        result = "Divided by zero!"
+      }
+    }
+    else {
+      result = "Invalid operator!"
+    }
+    console.log(result)
+
 </script>
 
 <script id="ch0104/20" type="x">
@@ -762,9 +768,20 @@ console.log(cost)
   console.log(height.toFixed(7));
 </script>
 
-<script id="ch0105/x21" type="">
+<script id="ch0105/21" type="x">
   var n = Number(prompt())
-  if (n == 0) {
-
+  while (n != 1) {
+    if (n % 2 != 0) {
+      console.log(n + "*3+1=" + (n * 3 + 1));
+      n = n * 3 + 1
+    }
+    else {
+      console.log(n + "/2=" + (n / 2));
+      n = n / 2
+    }
   }
+  console.log("END");
+</script>
+
+<script id="ch0105/22" type="x">
 </script>
