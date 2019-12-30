@@ -409,7 +409,7 @@ console.log(cost)
   console.log(result)
 </script>
 
-<script id="ch0104/20" type="">
+<script id="ch0104/20" type="x">
   var a = Number(prompt())
   var b = Number(prompt())
   var c = Number(prompt())
@@ -427,8 +427,8 @@ console.log(cost)
   }
   else {
     delta = -delta
-    x1 = (-b / 2 / a).toFixed(5) + "+" + (+Math.sqrt(delta) / 2 / a).toFixed(5) + "i"
-    x2 = (-b / 2 / a).toFixed(5) + "-" + (-Math.sqrt(delta) / 2 / a).toFixed(5) + "i"
+    x1 = (-b / 2 / a).toFixed(5) + "" + (+Math.sqrt(delta) / 2 / a).toFixed(5) + "i"
+    x2 = (-b / 2 / a).toFixed(5) + "" + (-Math.sqrt(delta) / 2 / a).toFixed(5) + "i"
     console.log("x1=" + x1 + ";" + "x2=" + x2);
   }
 
@@ -754,10 +754,13 @@ console.log(cost)
 <script id="ch0105/20" type="">
   var originalHeight = Number(prompt())
   var ten_time_height = 0
+  var height = 0
   var total = 0
   for (var count = 0 ; count < 10; count++){
-    if (count == 0 ) {
-      total = total + 50
+    if (counnt == 0) {
+      total = originalHeight + 0.5 * originalHeight
     }
+      total = total + height
+      height = 0.5 * height
   }
 </script>
