@@ -822,10 +822,17 @@ if (monthly_disposable >= 0) {
 <script id="ch0105/23" type="x">
 var total = Number(prompt())
 var people = Number(prompt())
-var single_demand = null
-var quantity_demand = null
-while (total - single_demand >= 0) {
+var count = 0
+for (var i = 0; i < people; i ++) {
+  var take_away = Number(prompt())
+  if ((total - take_away) < 0) {
+    count = count + 1
+    continue
+  }
+  total = total - take_away
 }
+console.log(count);
+
 </script>
 
 <script id="2-20-1" type="x">
@@ -854,7 +861,6 @@ while (total - single_demand >= 0) {
 </script>
 
 <script id="2-20-3" type="x">
-  debugger
   var size = 13
   var row_odd = ""
   var row_even = ""
