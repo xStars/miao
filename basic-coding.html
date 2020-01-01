@@ -839,7 +839,6 @@ console.log(count);
 var time = Number(prompt())
 var isHealth = 0
 var keepMaxTime = 0
-debugger
 for (var i = 0; i < time; i++) {
 var shrinkage = Number(prompt())
 var diastolic = Number(prompt())
@@ -853,6 +852,29 @@ var diastolic = Number(prompt())
   }
 }
 console.log(keepMaxTime);
+
+</script>
+
+<script id="ch0105/x25" type="">
+
+</script>
+
+<script id="ch0105/26" type="x">
+  var n =  Number(prompt())
+  var count = 0
+  var data
+  var one , ten , hundred , thousand
+  for (var i = 0; i < n ; i++) {
+    data = Number(prompt())
+    one = data % 10
+    ten = (data % 100 - one ) / 10
+    hundred = ( data % 1000 - ten * 10 - one ) / 100
+    thousand = (data - hundred * 100 - ten * 10 - one) /1000
+    if (one > thousand + hundred + ten ) {
+      count += 1
+    }
+  }
+  console.log(count);
 
 </script>
 
