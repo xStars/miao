@@ -835,6 +835,27 @@ console.log(count);
 
 </script>
 
+<script id="ch0105/24" type="x">
+var time = Number(prompt())
+var isHealth = 0
+var keepMaxTime = 0
+debugger
+for (var i = 0; i < time; i++) {
+var shrinkage = Number(prompt())
+var diastolic = Number(prompt())
+  if (shrinkage >= 90 && shrinkage <= 140 && diastolic >=60 && diastolic <=90) {
+    isHealth +=1
+    if (keepMaxTime < isHealth) {
+      keepMaxTime = isHealth
+    }
+  } else {
+    isHealth = 0
+  }
+}
+console.log(keepMaxTime);
+
+</script>
+
 <script id="2-20-1" type="x">
   var str = ""
   for (var count = 0; count < 7 ; count++) {
