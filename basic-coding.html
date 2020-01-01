@@ -905,6 +905,42 @@ for (var i = 0 ; i < String(n).length; i ++) {
   calculate_except = calculate_except * 10
 }
 console.log(result);
+</script>
+
+<script id="ch01015/x29" type="x">
+
+</script>
+
+<script id="ch0105/30" type="x">
+var m = Number(prompt())
+var k = Number(prompt())
+var calculate_mod = 10
+var calculate_except = 1
+var count = 0
+var result =""
+if (m % 19 == 0 ) {
+  for (var i = 0 ; i < String(m).length; i ++) {
+    if (i == 0) {
+      result = parseInt(m % calculate_mod)
+    } else {
+      result = parseInt(m % calculate_mod / calculate_except)
+    }
+    calculate_mod = calculate_mod * 10
+    calculate_except = calculate_except * 10
+    if (Number(result) == 3 ) {
+      count += 1
+    }
+  }
+  if (count == k) {
+    console.log("YES");
+  } else if(count !=k ){
+    console.log("NO");
+  }
+
+} else {
+  console.log("NO");
+}
+
 
 </script>
 
