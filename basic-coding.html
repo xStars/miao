@@ -966,13 +966,16 @@ if (m % 19 == 0 ) {
 
 <script id="ch0105/35" type="">
   var n = Number(prompt())
-  var e
+  var e = 1
   for (var count = 1; count <= n ; count++) {
     var CurrentSum = 1
-    for (var i = 1 ; i < count ; i ++) {
+    for (var i = 1 ; i <= count ; i ++) {
       CurrentSum = CurrentSum * i
     }
+    e = e + (1 / CurrentSum)
   }
+  console.log(e.toFixed(10));
+
 </script>
 
 <script id="2-20-1" type="x">
