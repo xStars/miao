@@ -928,7 +928,6 @@ console.log(keepMaxTime);
   var count = 0
   var data
   var one , ten , hundred , thousand
-  debugger
   for (var i = 0; i < n ; i++) {
     data = Number(prompt())
     one = data % 10
@@ -959,20 +958,30 @@ console.log(keepMaxTime);
 </script>
 
 <script id="ch0105/28" type="x">
-var n = Number(prompt())
-var calculate_mod = 10
-var calculate_except = 1
+// var n = Number(prompt())
+// var calculate_mod = 10
+// var calculate_except = 1
+// var result = ""
+// for (var i = 0 ; i < String(n).length; i ++) {
+//   if (i == 0) {
+//     result = parseInt(n % calculate_mod)
+//   } else {
+//   result = String(result) + " " + (parseInt(n % calculate_mod / calculate_except))
+//   }
+//   calculate_mod = calculate_mod * 10
+//   calculate_except = calculate_except * 10
+// }
+// console.log(result);
+var n = +prompt()
 var result = ""
-for (var i = 0 ; i < String(n).length; i ++) {
-  if (i == 0) {
-    result = parseInt(n % calculate_mod)
-  } else {
-  result = String(result) + " " + (parseInt(n % calculate_mod / calculate_except))
-  }
-  calculate_mod = calculate_mod * 10
-  calculate_except = calculate_except * 10
-}
-console.log(result);
+debugger
+do {
+  var d = n % 10
+  n = (n - d) / 10
+  result += d + " "
+} while (n > 0)
+  console.log(result);
+
 </script>
 
 <script id="ch01015/29" type="x">
