@@ -1035,6 +1035,7 @@ if (m % 19 == 0 ) {
   var n = +prompt()
   var m = +prompt()
   var result = ""
+  var count = 1
   for (var i = 1; i <= n ; i ++) {
     var lamp = true
     for (var p = 1 ;p <= m; p++) {
@@ -1043,12 +1044,12 @@ if (m % 19 == 0 ) {
       }
     }
     if (lamp == false) {
-      if ( i ==1) {
+      if ( count == 1) {
         result = i
       } else {
         result = result + "," + i
       }
-
+      count++
     }
   }
   console.log(result);
