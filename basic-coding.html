@@ -1031,7 +1031,7 @@ if (m % 19 == 0 ) {
 }
 </script>
 
-<script id="ch0105/31" type="">
+<script id="ch0105/31" type="x">
   var n = +prompt()
   var m = +prompt()
   var result = ""
@@ -1053,6 +1053,19 @@ if (m % 19 == 0 ) {
     }
   }
   console.log(result);
+</script>
+
+<script id="ch0105/32" type="">
+  var n = +prompt()
+  var q = 2
+  var p = 1
+  var sum = 0
+  for (var i = 1; i <= n ; i ++) {
+    sum += (q + p) / q
+    p = q
+  }
+  console.log(sum.toFixed(4));
+
 
 </script>
 
