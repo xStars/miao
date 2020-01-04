@@ -1120,7 +1120,30 @@ if (m % 19 == 0 ) {
   console.log(result.toFixed(2));
 </script>
 
-<script id="ch0105/27" type="">
+<script id="ch0105/39" type="x">
+  var n = +prompt()
+  var sum = 0
+  for (var i =1 ; i <= n ;i ++) {
+    if (i % 7 ==0) {
+      continue
+    } else {
+      var t = i
+      var hasRel = false
+      while ( t > 0) {
+        var d = t % 10
+        if (d == 7) {
+          hasRel =true
+          break
+        }
+        t = (t - d) / 10
+      }
+      if (hasRel) {
+        continue
+      }
+    }
+    sum +=i * i
+  }
+  console.log(sum);
 
 </script>
 <script id="ch0105/45" type="x">
