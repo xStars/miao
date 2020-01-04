@@ -700,7 +700,7 @@ console.log(cost)
     count = count + 1
     M = M + ( M * R )
   }
-  console.log(Math.floor(M));
+  console.log(Math.trunc(M));
 
 </script>
 
@@ -729,8 +729,15 @@ console.log(cost)
 </script>
 
 <script id="ch0105/x17" type="x">
-  var k = Number(prompt())
-
+  var n = Number(prompt())
+  var a = 1
+  var b = 1
+  for (var i = 1 ; i < n ; i++) {
+    var c = a + b
+    a = b
+    b = c
+  }
+  console.log(a);
 </script>
 
 <script id="ch0105/18" type="x">
@@ -762,26 +769,39 @@ console.log(cost)
 
 <script id="ch0105/19" type="x">
   var n =  Number(prompt())
+  var sum = 0
   for (var count = 0; count < n; count++){
     var x = Number(prompt())
     var y = Number(prompt())
     var people = Number(prompt())
     var c = Math.sqrt(Math.pow((0 - 30), 2) + Math.pow((0 - 40), 2))
     time = (1 + 0.5) * people + ( c / 50 * 2 )
+    sum += sum
   }
-  console.log(Math.ceil(time));
+  console.log(Math.ceil(sum));
 
 </script>
 
 <script id="ch0105/20" type="x">
-  var height = Number(prompt())
-  var total = 0
-  for (var count = 0 ; count < 10; count = count + 1){
-    total = total + height + 0.5 * height
-    var height = 0.5 * height
+  // var height = Number(prompt())
+  // var total = 0
+  // for (var count = 0 ; count < 10; count = count + 1){
+  //   total = total + height + 0.5 * height
+  //   var height = 0.5 * height
+  // }
+  // console.log((total - height).toFixed(4));
+  // console.log(height.toFixed(7));
+  var h = +prompt()
+  var t = h //声明一个temp变量存储原始高度
+  var sum = 0
+  for (var i = 1 ; i <=10; i++) {
+    sum += h * 2 //第一次下落时 非对称，最后需要减去原始高度t
+    h = h / 2 //反弹高度为上一轮下落高度一半
   }
-  console.log((total - height).toFixed(4));
-  console.log(height.toFixed(7));
+  console.log((sum - t).toFixed(4) );
+  console.log(h.toFixed(7));
+
+
 </script>
 
 <script id="ch0105/21" type="x">
@@ -800,25 +820,49 @@ console.log(cost)
 </script>
 
 <script id="ch0105/22" type="x">
-var bank = 0
+// var bank = 0
+// var pocket_money = 0
+// var budget = 0
+// var monthly_disposable = 0
+// for (var i = 0; i < 12 ; i++) {
+//   budget =  Number(prompt())
+//   if (monthly_disposable < 0) {
+//     console.log(-(i));
+//     break
+//   } else {
+//   monthly_disposable = 300 + pocket_money - budget
+//   pocket_money = monthly_disposable % 100
+//   bank = bank + (monthly_disposable - pocket_money)
+//   }
+// }
+// if (monthly_disposable >= 0) {
+//   bank = bank + 0.2 * bank + pocket_money
+//   console.log(bank)
+// }
 var pocket_money = 0
-var budget = 0
-var monthly_disposable = 0
-for (var i = 0; i < 12 ; i++) {
-  budget =  Number(prompt())
-  if (monthly_disposable < 0) {
-    console.log(-(i));
+var bank = 0
+var flag = false
+
+for (var i = 1 ; i <=12 ; i++) {
+  pocket_money += 300
+  var budget = +prompt()
+  if (budget > pocket_money) {
+    console.log(- i);
+    flag = true
     break
-  } else {
-  monthly_disposable = 300 + pocket_money - budget
-  pocket_money = monthly_disposable % 100
-  bank = bank + (monthly_disposable - pocket_money)
+  }
+  pocket_money -= budget
+  if (pocket_money > 100) {
+    var t = pocket_money - (pocket_money % 100)
+    bank += t
+    pocket_money = pocket_money - t
   }
 }
-if (monthly_disposable >= 0) {
-  bank = bank + 0.2 * bank + pocket_money
-  console.log(bank)
+pocket_money = pocket_money + bank * 1.2
+if (!flag) {
+  console.log(Math.trunc(pocket_money));
 }
+
 </script>
 
 <script id="ch0105/23" type="x">
@@ -857,7 +901,25 @@ console.log(keepMaxTime);
 
 </script>
 
-<script id="ch0105/x25" type="">
+<script id="ch0105/x25" type="x">
+  for (var i = 100; i < 999 ; i ++) {
+    var a7 = i % 7
+    var b7 = (i - a7) / 7 % 7
+    var c7 = (i - a7 - b7 * 7) / 7 / 7 % 7
+
+    var a9 = i % 9
+    var b9 = (i - a9) / 9 % 9
+    var c9 = (i - a9 - b9 * 9) / 9 / 9 % 9
+
+    if (a7 == c9 && b7 == b9 && c7 == a9) {
+      break
+    }
+  }
+  console.log(i);
+  console.log(c7 + "" + b7 + "" + a7);
+  console.log(c9 + "" + b9 + "" + a9);
+
+
 
 </script>
 
@@ -866,12 +928,16 @@ console.log(keepMaxTime);
   var count = 0
   var data
   var one , ten , hundred , thousand
+  debugger
   for (var i = 0; i < n ; i++) {
     data = Number(prompt())
     one = data % 10
-    ten = (data % 100 - one ) / 10
-    hundred = ( data % 1000 - ten * 10 - one ) / 100
-    thousand = (data - hundred * 100 - ten * 10 - one) /1000
+    // var me_ten = (data % 100 - one ) / 10
+    ten = (data - one) / 10 % 10
+    // var me_hundred = ( data % 1000 - ten * 10 - one ) / 100
+    hundred = (data - ten * 10 - one) / 100 % 10
+    // var me_thousand = (data - hundred * 100 - ten * 10 - one) /1000
+    thousand = (data -hundred * 100 - ten * 10 - one) / 1000
     if (one > thousand + hundred + ten ) {
       count += 1
     }
@@ -910,6 +976,14 @@ console.log(result);
 </script>
 
 <script id="ch01015/x29" type="x">
+var n = Number(prompt())
+var result = 0
+do {
+  var digit = n % 10
+  result = result * 10 + digit
+  n = (n - digit ) / 10
+} while (n != 0)
+console.log(result);
 
 </script>
 
@@ -944,10 +1018,21 @@ if (m % 19 == 0 ) {
 }
 </script>
 
-<script id="ch0105/x31" type="x">
+<script id="ch0105/31" type="x">
   var n =  Number(prompt())
   var m = Number(prompt())
   for (var i = 0; i < n ; i++) {
+    var flag = true
+    for (var p = 1;p <=m  p <= i;p++) {
+      if (i % p ==0 ) {
+        flag = !flag
+      }
+    }
+    if (flag == false) {
+      result += "," + i
+      console.log(i);
+
+    }
   }
 </script>
 
@@ -964,7 +1049,7 @@ if (m % 19 == 0 ) {
   console.log(total);
 </script>
 
-<script id="ch0105/35" type="">
+<script id="ch0105/35" type="x">
   var n = Number(prompt())
   var e = 1
   for (var count = 1; count <= n ; count++) {
@@ -975,9 +1060,35 @@ if (m % 19 == 0 ) {
     e = e + (1 / CurrentSum)
   }
   console.log(e.toFixed(10));
-
 </script>
 
+<script id="ch0105/36" type="x">
+  var x = Number(prompt())
+  var n = Number(prompt())
+  var CurrentResult = 0
+  var total = 0
+  while (n > 1) {
+    for (var i = 0;)
+  }
+
+</script>
+<script id="ch0105/45" type="x">
+  var n = Number(prompt())
+  var sum = 0
+  var count = 0
+  var salary = 1
+
+  for (var i = 1 ;i <=n ; i++) {
+    sum = sum + salary
+    count ++
+
+    if (count == salary) {
+      salary++
+      count = 0
+    }
+  }
+  console.log(sum);
+</script>
 <script id="2-20-1" type="x">
   var str = ""
   for (var count = 0; count < 7 ; count++) {
@@ -1023,4 +1134,24 @@ if (m % 19 == 0 ) {
       console.log(row_even);
     }
   }
+</script>
+
+<script id="" type="x">
+  var x = 12
+  var low = 1
+  var high = x
+  for (var i = 1; ; i++) {
+    while (high - low > 0.00000000000001) {
+      var mid = (low + high) / 2
+      if (mid * mid > x) {
+        high = mid
+      } else if (mid * mid < x) {
+        low = mid
+      } else {
+        break
+      }
+    }
+  }
+  console.log(mid);
+
 </script>
