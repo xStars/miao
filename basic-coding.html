@@ -957,7 +957,7 @@ console.log(keepMaxTime);
   console.log(count + 1);
 </script>
 
-<script id="ch0105/28" type="">
+<script id="ch0105/28" type="x">
 // var n = Number(prompt())
 // var calculate_mod = 10
 // var calculate_except = 1
@@ -978,7 +978,6 @@ var i = 0
 do {
   var d = n % 10
   n = (n - d) / 10
-
   if (i == 0) {
     result = d
   } else {
@@ -990,16 +989,15 @@ do {
 
 </script>
 
-<script id="ch01015/29" type="x">
-var n = Number(prompt())
+<script id="ch01015/29" type="">
+var n = +prompt()
 var result = 0
 do {
-  var digit = n % 10
-  result = result * 10 + digit
-  n = (n - digit ) / 10
+  var d = n % 10
+  n = (n - d) / 10
+  result =  result * 10 + d
 } while (n != 0)
-console.log(result);
-
+  console.log(result);
 </script>
 
 <script id="ch0105/30" type="x">
