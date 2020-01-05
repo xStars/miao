@@ -1262,7 +1262,6 @@ if (m % 19 == 0 ) {
   var b = +prompt()
   var c = +prompt()
   var temp
-  debugger
   if (a > b) {
     temp = a
     a = b
@@ -1281,6 +1280,35 @@ if (m % 19 == 0 ) {
   console.log(a);
   console.log(b);
   console.log(c);
+</script>
+
+<script id="narcissistic" type="x">
+  var n = +prompt()
+  var t = n
+  var count = 0
+  var sum = 0
+  //计算输入n的位数
+  do {
+    var d = t % 10
+    count++
+    t = (t - d) / 10
+  } while (t  > 0)
+  t = n
+  do {
+    var d = t % 10
+    var power = 1
+    for (var i = 0 ; i < count; i ++) {
+      power *= d
+    }
+    sum += power
+    t = (t - d) / 10
+  } while (t  > 0)
+
+  if (sum == n) {
+    console.log("YES");
+  } else {
+    console.log("NO");
+  }
 </script>
 <script id="2-20-1" type="x">
   var str = ""
