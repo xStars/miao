@@ -1144,7 +1144,23 @@ if (m % 19 == 0 ) {
     sum +=i * i
   }
   console.log(sum);
+</script>
 
+<script id="ch0105/40" type="x">
+  var n = +prompt()
+  var count = 0
+  debugger
+  for (var i = 1 ;i <= n ;i++) {
+    var t = i
+    while (t > 0) {
+      var d = t % 10
+      if (d == 1) {
+        count += 1
+      }
+      t =(t - d) / 10
+    }
+  }
+  console.log(count);
 </script>
 <script id="ch0105/45" type="x">
   var n = Number(prompt())
