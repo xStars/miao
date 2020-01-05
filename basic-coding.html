@@ -1310,7 +1310,36 @@ if (m % 19 == 0 ) {
     console.log("NO");
   }
 </script>
+<script id="palindrom" type="x">
+  var n = +prompt()
+  var t = n
+  var count = 0
+  var reverse = 0
+  debugger
+  do {
+    var d = t % 10
+    count++
+    t = (t - d) / 10
+  } while (t > 0)
 
+  var power = 1
+  for (var i = 0; i < count - 1;i++) {
+    power *= 10
+  }
+  t = n
+  do {
+    var d = t % 10
+    reverse = reverse +( d * power )
+    power /= 10
+    t = (t - d) / 10
+  } while (t > 0)
+  if (n == reverse) {
+    console.log("YES");
+  } else {
+    console.log("NO");
+  }
+
+</script>
 <script id="narcissistics" type="x">
   for (var j = 100; j <=1000; j ++) {
     var n = j
@@ -1339,6 +1368,8 @@ if (m % 19 == 0 ) {
     }
 }
 </script>
+
+
 <script id="2-20-1" type="x">
   var str = ""
   for (var count = 0; count < 7 ; count++) {
