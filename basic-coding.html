@@ -1149,7 +1149,6 @@ if (m % 19 == 0 ) {
 <script id="ch0105/40" type="x">
   var n = +prompt()
   var count = 0
-  debugger
   for (var i = 1 ;i <= n ;i++) {
     var t = i
     while (t > 0) {
@@ -1162,6 +1161,27 @@ if (m % 19 == 0 ) {
   }
   console.log(count);
 </script>
+
+<script id="ch0105/41" type="x">
+  var l = +prompt()
+  var r = +prompt()
+  var count = 0
+  while (l <= r) {
+    var t = l
+    while (t > 0) {
+      var d =t % 10
+      if (d == 2) {
+        count += 1
+      }
+      t = (t - d) / 10
+    }
+    l += 1
+  }
+  console.log(count);
+</script>
+
+<script id="ch0105/42" type=""></script>
+
 <script id="ch0105/45" type="x">
   var n = Number(prompt())
   var sum = 0
