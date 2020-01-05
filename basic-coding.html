@@ -1310,6 +1310,35 @@ if (m % 19 == 0 ) {
     console.log("NO");
   }
 </script>
+
+<script id="narcissistics" type="x">
+  for (var j = 100; j <=1000; j ++) {
+    var n = j
+    var t = n
+    var count = 0
+    var sum = 0
+    //计算输入n的位数
+    do {
+      var d = t % 10
+      count++
+      t = (t - d) / 10
+    } while (t  > 0)
+    t = n
+    do {
+      var d = t % 10
+      var power = 1
+      for (var i = 0 ; i < count; i ++) {
+        power *= d
+      }
+      sum += power
+      t = (t - d) / 10
+    } while (t  > 0)
+
+    if (sum == n) {
+      console.log(sum);
+    }
+}
+</script>
 <script id="2-20-1" type="x">
   var str = ""
   for (var count = 0; count < 7 ; count++) {
