@@ -1236,6 +1236,27 @@ if (m % 19 == 0 ) {
   }
   console.log(sum);
 </script>
+
+<script id="7" type="x">
+  var n = +prompt()
+  var t = n
+  var result = "NO"
+  while (t > 0) {
+    if (n % 7 == 0) {
+      result = "YES"
+      break
+    } else {
+      result = "NO"
+      var d = n % 10
+      if (d == 7) {
+        result ="YES"
+      }
+      t = (t - d) / 10
+      }
+    }
+  console.log(result);
+
+</script>
 <script id="2-20-1" type="x">
   var str = ""
   for (var count = 0; count < 7 ; count++) {
