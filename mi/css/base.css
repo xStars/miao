@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff2') format('woff2'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  font-size: 16px;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 14px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+  color: #333;
+  background-color: #fff;
+  /* min-width: 1226px; */
+  width: 100%;
+  margin: 0;
+  /* overflow-x: hidden; */
+  /* overflow-y: scroll; */
+}
+
+.container {
+  width: 1226px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a {
+  color: #757575;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff6700
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+}
+
+* {
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.1);
+}

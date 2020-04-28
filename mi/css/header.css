@@ -1,0 +1,183 @@
+.site-header {
+  height: 100px;
+  width: 1226px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  z-index: 100;
+}
+
+.site-header .contrainer {
+  position: relative;
+  width: 1266px;
+  height: 90px;
+  margin-top: 0 auto;
+}
+
+.site-header .left-logo {
+  position: absolute;
+  top: 14px;
+  width: 55px;
+  height: 55px;
+  background: url(../icon/mi-logo.png) no-repeat #ff6700;
+  background-color: #ff6700;
+  background-position: center center;
+  transition: .3s;
+}
+
+.site-header .left-logo::before {
+  box-sizing: border-box;
+  position: absolute;
+  left: -55px;
+  content: "";
+  width: 55px;
+  height: 55px;
+  overflow: hidden;
+  background: url(../icon/mi-home.png) no-repeat center center;
+  visibility: hidden;
+}
+
+/* logo伪元素移动到logo位置显示  */
+.site-header .left-logo:hover::before {
+  left: 0;
+  visibility: visible;
+  transition: .3s;
+}
+
+/* 鼠标悬浮到logo上对背景往左偏移，使其不可见，配合后续移出时拉回效果 */
+.site-header .left-logo:hover {
+  /* background-image: none; */
+  background-position: 55px center;
+}
+
+/* logo点击时缩放效果 */
+.site-header .left-logo:active::before {
+  transform: scale(.9)
+}
+
+.site-header .header-search {
+  width: 296px;
+  height: 50px;
+  position: absolute;
+  top: 25px;
+  right: 0px;
+}
+
+.site-header form {
+  font-size: 0;
+}
+
+.site-header form * {
+  font-size: initial;
+}
+
+.site-header .search-text {
+  position: absolute;
+  width: 245px;
+  height: 50px;
+  border: 1px solid #e0e0e0;
+  padding: 0 10px;
+  outline: none;
+
+}
+
+.site-header .search-text:focus {
+  border-color: #ff6700;
+  z-index: 100;
+}
+
+.site-header .search-text:focus+*+*+*+*+.search-list {
+  visibility: visible;
+}
+
+.site-header .header-search .search-list:hover {
+  visibility: visible;
+}
+
+
+.site-header .search-text:focus+.submit {
+  border: 1px solid #ff6700;
+}
+
+.site-header .header-search .iconfont {
+  font-size: 24px;
+  font-weight: 1000;
+}
+
+.site-header .header-search .submit {
+  position: absolute;
+  right: 0;
+  width: 52px;
+  height: 50px;
+  z-index: 2;
+  font-size: 24px;
+  line-height: 24px;
+  background-color: #fff;
+  color: #616161;
+  border: 1px solid #e0e0e0;
+  padding: 14px
+}
+
+.site-header .header-search .submit:hover {
+  background-color: #ff6700;
+  color: #fff;
+  border-color: #ff6700;
+}
+
+.site-header .header-search .search-titp {
+  position: absolute;
+  font-size: 12px;
+  line-height: 17px;
+  background-color: #eee;
+  padding: 0 5px;
+  top: 15px;
+
+}
+
+.site-header .header-search .search-titp.first {
+  position: absolute;
+  right: 154px;
+  display: inline-block;
+}
+
+.site-header .header-search .search-titp.second {
+  position: absolute;
+  right: 61px;
+  display: inline-block;
+
+}
+
+.site-header .header-search a {
+  text-decoration: none;
+}
+
+.site-header .header-search .search-titp.first:hover,
+.search-titp.second:hover {
+  background-color: #ff6700;
+  color: #fff;
+}
+
+.site-header .header-search .search-list {
+  position: absolute;
+  width: 245px;
+  top: 49px;
+  margin: 0;
+  border: 1px solid;
+  border-color: transparent #ff6700 #ff6700 #ff6700;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+  visibility: hidden;
+}
+
+.site-header .header-search .search-list a {
+  padding-left: 16px;
+  display: block;
+  font-size: 12px;
+  line-height: 30px;
+}
+
+.site-header .header-search .search-list a:hover {
+  background-color: #fafafa;
+  color: #757575;
+}

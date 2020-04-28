@@ -1,0 +1,118 @@
+* {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes leave-right {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 100%;
+
+  }
+}
+
+.silder {
+  width: 600px;
+  height: 400px;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid red;
+  position: relative;
+
+  input {
+    display: none;
+
+  }
+
+  >input:nth-child(1):checked~.spans span:nth-child(1),
+  input:nth-child(2):checked~.spans span:nth-child(2),
+  input:nth-child(3):checked~.spans span:nth-child(3),
+  input:nth-child(4):checked~.spans span:nth-child(4) {
+    left: 0;
+    animation: none;
+  }
+
+  .labels {
+    position: absolute;
+    width: calc(100% - 40px);
+    bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+    label {
+      width: 36px;
+      height: 36px;
+      line-height: 30px;
+      border: 3px solid rgba(0, 0, 0, 0.3);
+      border-radius: 100%;
+      background: rgba(130, 195, 217, 0.9);
+      color: white;
+      cursor: pointer;
+      z-index: 20;
+
+    }
+  }
+
+  >.spans {
+    width: 25%;
+    height: 100%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+
+    &:nth-child(6) span {
+      background-position: 0 0;
+    }
+
+    &:nth-child(7) span {
+      background-position: 33.33333% 0;
+    }
+
+    &:nth-child(8) span {
+      background-position: 66.66666% 0;
+    }
+
+    &:nth-child(9) span {
+      background-position: 100% 0;
+    }
+
+    >span {
+      width: 100%;
+      height: 100%;
+      transition: 1s;
+      background-size: 600px 100%;
+      position: absolute;
+      left: -100%;
+      animation: leave-right 1s;
+
+      &:nth-child(1) {
+        background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/1.jpg);
+
+      }
+
+      &:nth-child(2) {
+        background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/2.jpg);
+
+      }
+
+      &:nth-child(3) {
+        background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/3.jpg);
+      }
+
+      &:nth-child(4) {
+        background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/4.jpg);
+
+
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    @keyframes contrain {
+      form {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes face {
+      form {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(-360deg);
+      }
+    }
+
+    .contrain {
+      width: 400px;
+      height: 400px;
+      border: 1px solid red;
+      border-radius: 100%;
+      text-align: center;
+      animation: contrain 8s linear infinite;
+    }
+
+    .face {
+      display: inline-block;
+      animation: face 8s linear infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="contrain">
+    <span class="face">
+      😊
+    </span>
+  </div>
+</body>
+
+</html>

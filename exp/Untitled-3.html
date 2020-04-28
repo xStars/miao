@@ -1,0 +1,18 @@
+<script>
+  var num = Math.round(Math.random() * 100)
+  var x = 0
+  do {
+    x = Number(prompt())
+  }
+  while (x != num) {
+    if (x > num) {
+      alert("大了");
+    }
+    else if (x < num) {
+      alert("小了");
+    }
+    else if (x == num) {
+      alert("猜中");
+    }
+  }
+</script>

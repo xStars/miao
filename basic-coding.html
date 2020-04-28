@@ -1436,3 +1436,71 @@ if (m % 19 == 0 ) {
   console.log(mid);
 
 </script>
+
+<script type="x">
+  function digitwidth(n) {
+    var count = 0
+    do {
+      var d = n % 10
+      n = (n - d) / 10
+      count++
+    } while (n > 0)
+    return count
+  }
+</script>
+
+<script type="x">
+  function power(a, n) {
+    var result = 1
+    for (var i = 0; i < n; i++) {
+      result *= a
+    }
+    return result
+  }
+
+</script>
+
+<script type="x">
+  function isnarcissistic(n) {
+    var t = n
+    var count = digitwidth(n)
+    var reverse = 0
+    var result
+    var pow = power(10, count - 1)
+    do {
+      var d = t % 10
+      reverse = reverse + (d * pow)
+      pow /= 10
+      t = (t - d) / 10
+    } while (t > 0)
+    if (n == reverse) {
+      result = "YES"
+    } else {
+      result = "NO"
+    }
+    return result
+  }
+</script>
+
+<script type="x">
+  function isPrime(n) {
+    var sqrt_n = Math.sqrt(n)
+    for (var i = 2; i <= sqrt_n; i++) {
+      if (n % i == 0) {
+        return false
+      } else {
+        return true
+      }
+    }
+  }
+</script>
+
+<script>
+  var isUgly = function (num) {
+    if (num % 2 == 0 && num % 3 == 0 && num % 5 == 0) {
+      return true
+    } else {
+      return false
+    }
+  }
+</script>

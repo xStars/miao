@@ -1,0 +1,219 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.site-topbar {
+  position: relative;
+  color: #b0b0b0;
+  background-color: #333;
+  font-size: 12px;
+  height: 40px;
+}
+
+.site-topbar .container {
+  position: relative;
+}
+
+.site-topbar a {
+  color: #b0b0b0;
+  line-height: 40px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.site-topbar a:hover {
+  color: white;
+}
+
+.site-topbar .container {
+  width: 1226px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-topbar .sep {
+  font-weight: 400;
+  color: #424242;
+  margin: 0 3.6px;
+  padding: 0 3.6px;
+}
+
+.site-topbar .topbar-nav {
+  position: relative;
+}
+
+/* .topbar-down .appcode {
+  position: absolute;
+  display: none;
+  top: 40px;
+  left: 520px;
+  width: 124px;
+  height: 0px;
+  margin-top: 0px;
+  text-align: center;
+  background: url(https://i1.mifile.cn/f/i/17/appdownload/download.png) no-repeat center center;
+  background-size: 90px 90px;
+  vertical-align: bottom;
+  padding: 120px 20px 20px 20px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 1px 5px #aaa;
+} */
+.site-topbar .topbar-nav .topbar-down {
+  position: relative;
+
+}
+
+.site-topbar .topbar-down .appcode {
+  width: 124px;
+  height: 0;
+  background-color: #fff;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin-left: -55px;
+  padding: 18px;
+  padding-bottom: 0;
+  padding-top: 0;
+  box-shadow: 0 1px 5px #aaa;
+  text-align: center;
+  color: #333;
+  /* display: inline-block; */
+  overflow: hidden;
+  z-index: 200;
+}
+
+
+
+.site-topbar .topbar-down::before {
+  content: "";
+  height: 0px;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  margin-left: -6px;
+  border: 8px solid;
+  border-color: transparent transparent #fff transparent;
+  /* box-shadow: 0 1px 5px #aaa; */
+  z-index: 40;
+  visibility: hidden;
+}
+
+.site-topbar .topbar-down:hover .appcode {
+  visibility: visible;
+  height: 150px;
+  opacity: 1;
+  transition: .2s;
+}
+
+.site-topbar .topbar-down:hover::before {
+  visibility: visible;
+}
+
+.drop-down-cart {
+  float: right;
+  width: 316px;
+  height: 100px;
+}
+
+/* 原背景图片废弃，使用icon字体 */
+/* .topbar-cart .icon-cart {
+  background: url(../icon/icon-cart.png) no-repeat center;
+  width: 18px;
+  height: 14px;
+  display: inline-block;
+  background-size: 110%;
+  vertical-align: text-top;
+} */
+
+.site-topbar .iconfont {
+  font-size: 20px;
+  font-weight: 400;
+  color: #b0b0b0;
+  vertical-align: top;
+}
+
+.site-topbar .topbar-cart {
+  background-color: #424242;
+  float: right;
+  position: relative;
+  /* top: 0px;
+  right: -1106px; */
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-top: -40px;
+  display: inline-block;
+}
+
+.shop-cart::before {
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  content: "购物车中还没有商品，赶紧选购吧！";
+  text-align: center;
+  width: 316px;
+  height: 0px;
+  padding-top: 40px;
+  background-color: #fff;
+  text-decoration: none;
+  color: #424242;
+  box-shadow: 0 1px 5px #aaa;
+  z-index: 41;
+  opacity: 0.3;
+  display: none;
+  z-index: 200;
+}
+
+/* .shop-cart:hover::before {
+  display: block;
+  height: 100px;
+  opacity: 1;
+  transition: .3s;
+} */
+
+.topbar-user-info {
+  display: inline-block;
+  width: 140.69px;
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  right: 140px;
+
+}
+
+.topbar-user-info a {
+  text-align: center;
+}
+
+.site-topbar .topbar-cart a {
+  color: #b0b0b0;
+}
+
+.topbar-user-info a:hover {
+  color: #fff;
+}
+
+.topbar-cart:hover {
+  background-color: #fff;
+  color: #ff6700
+}
+
+.topbar-cart:hover>.shop-cart {
+  background-color: #fff;
+  color: #ff6700
+}
+
+.topbar-cart:hover.shop-cart::before {
+  display: inline-block;
+  height: 100px;
+  opacity: 1;
+  transition: .3s;
+  cursor: text;
+}

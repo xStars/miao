@@ -1,0 +1,41 @@
+<script>
+  var numWidth = function (n) {
+    var count = 0
+    do {
+      var d = n % 10
+      n = (n - d) / 10
+      count++
+    } while (n > 0)
+    return count
+  }
+
+  var power = function (a, n) {
+    var result = 1
+    for (var i = 0; i < n; i++) {
+      result *= a
+    }
+    return result
+  }
+  debugger
+  var isPalindrome = function (x) {
+    var width = numWidth(x)
+    var pow = power(10, width)
+    var sum = 0
+    var t = x
+    if (x < 0) {
+      return false
+    }
+    for (var i = 0; i < width; i++) {
+      var d = t % 10
+      t = (t - d) / 10
+      pow /= 10
+      sum += (d * pow)
+    }
+    if (sum == x) {
+      return true
+    } else {
+      return false
+    }
+  }
+  isPalindrome(123)
+</script>
