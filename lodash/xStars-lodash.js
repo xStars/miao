@@ -1,3 +1,3 @@
-var xStars = {
+var xstars = {
 
 }
