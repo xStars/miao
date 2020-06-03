@@ -6,7 +6,7 @@ var xstars = {
       return false
     }
   },
-  chunck: function (array, size) {
+  chunk: function (array, size) {
     if (array.length == 0) {
       return []
     }
