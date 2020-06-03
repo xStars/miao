@@ -26,5 +26,18 @@ var xstars = {
       result.push(temp)
     }
     return result
-  }
+  },
+  compact: function (array) {
+    if (array.length == 0) {
+      return []
+    }
+    var result = []
+    for (var i = 0; i < array.length; i++) {
+      if (array[i] == false) {
+        continue
+      }
+      result.push(array[i])
+    }
+    return result
+  },
 }
