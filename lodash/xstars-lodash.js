@@ -40,8 +40,8 @@ var xstars = {
     }
     return result
   },
-  concat: function (array, [values]) {
-    array.push(...[values])
+  concat: function (array, values) {
+    array.push(...values)
     return array
   }
 }
