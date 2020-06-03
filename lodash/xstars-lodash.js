@@ -33,7 +33,7 @@ var xstars = {
     }
     var result = []
     for (var i = 0; i < array.length; i++) {
-      if (array[i] == false) {
+      if (array[i] == false || array[i] == NaN) {
         continue
       }
       result.push(array[i])
