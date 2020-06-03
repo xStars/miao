@@ -5,5 +5,26 @@ var xstars = {
     } else {
       return false
     }
+  },
+  chunck: function (array, size) {
+    if (array.length == 0) {
+      return []
+    }
+    var result = []
+    var count = 0
+    var temp = []
+    for (var i = 0; i < array.length; i++) {
+      count++
+      temp.push(array[i])
+      if (count == size) {
+        count = 0
+        result.push(temp)
+        temp = []
+      }
+    }
+    if (temp.length != 0) {
+      result.push(temp)
+    }
+    return result
   }
 }
