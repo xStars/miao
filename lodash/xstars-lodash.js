@@ -53,5 +53,15 @@ var xstars = {
       result[i - n] = array[i]
     }
     return result
+  },
+  dropRight: function (array, n = 1) {
+    if (array.length <= n) {
+      return []
+    }
+    let result = []
+    for (let i = 0; i < (array.length - n); i++) {
+      result[i] = array[i]
+    }
+    return result;
   }
 }
