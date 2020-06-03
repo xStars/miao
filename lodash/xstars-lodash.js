@@ -43,5 +43,15 @@ var xstars = {
   concat: function (array, values) {
     array.push(...values)
     return array
+  },
+  drop: function (array, n = 1) {
+    if (array.length <= n) {
+      return []
+    }
+    let result = []
+    for (let i = n; i < array.length; i++) {
+      result[i - n] = array[i]
+    }
+    return result
   }
 }
