@@ -33,11 +33,15 @@ var xstars = {
     }
     var result = []
     for (var i = 0; i < array.length; i++) {
-      if (array[i] == false || array[i] == NaN) {
+      if (array[i] == false || isNaN(array[i])) {
         continue
       }
       result.push(array[i])
     }
     return result
   },
+  concat: function (array, [values]) {
+    array.push(...[values])
+    return array
+  }
 }
