@@ -66,7 +66,7 @@ var xstars = {
   },
   fill: function (array, value, start = 0, end = array.length) {
     for (let i = start; i < end; i++) {
-      arry[i] = value
+      array[i] = value
     }
     return array
   },
