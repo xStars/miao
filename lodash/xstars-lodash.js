@@ -93,4 +93,7 @@ var xstars = {
   flatten: function (array) {
     return Array.prototype.concat.apply([], array)
   },
+  flattenDeep: function (array) {
+    return array.flat(Infinity)
+  },
 }
