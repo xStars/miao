@@ -83,7 +83,8 @@ var xstars = {
     if (array.length <= 1) {
       return []
     }
-    return array.length = array.length - 1
+    array.length = array.length - 1
+    return array
   }
 
 }
