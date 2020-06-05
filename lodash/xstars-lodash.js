@@ -86,7 +86,7 @@ var xstars = {
     array.length = array.length - 1
     return array
   },
-  faltten: function (...array) {
+  flatten: function (...array) {
     return array
   },
 
