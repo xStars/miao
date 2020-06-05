@@ -45,7 +45,7 @@ var xstars = {
     return array
   },
   difference: function (array, ...values) {
-    var n = new set(passed)
+    var n = new Set(passed)
     return array.filtrt(x => !passed.has(x))
   },
   drop: function (array, n = 1) {
