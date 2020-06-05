@@ -85,6 +85,10 @@ var xstars = {
     }
     array.length = array.length - 1
     return array
-  }
+  },
+  faltten: function (...array) {
+    return array
+  },
+
 
 }
