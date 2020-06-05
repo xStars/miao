@@ -44,10 +44,10 @@ var xstars = {
     array.push(...values)
     return array
   },
-  difference: function (array, ...values) {
-    var n = new Set(passed)
-    return array.filtrt(x => !passed.has(x))
-  },
+  // difference: function (array, ...values) {
+  //   var n = new Set(passed)
+  //   return array.filtrt(x => !passed.has(x))
+  // },
   drop: function (array, n = 1) {
     if (array.length <= n) {
       return []
