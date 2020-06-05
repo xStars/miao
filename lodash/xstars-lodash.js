@@ -86,9 +86,7 @@ var xstars = {
     array.length = array.length - 1
     return array
   },
-  flatten: function (...array) {
-    return array
+  flatten: function (array) {
+    return Array.prototype.concat.apply([], array)
   },
-
-
 }
