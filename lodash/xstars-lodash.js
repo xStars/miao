@@ -108,9 +108,7 @@ var xstars = {
     for (var i = 0; i < array.length; i++) {
       var item = array[i];
       if (Array.isArray(item)) {
-        for (var j = 0; j < array.length; j++) {
-          result.push(item[j])
-        }
+        result.push(...item)
       } else {
         result.push(item)
       }
