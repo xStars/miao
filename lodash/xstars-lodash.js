@@ -48,6 +48,16 @@ var xstars = {
   //   var n = new Set(passed)
   //   return array.filtrt(x => !passed.has(x))
   // },
+  difference: function (ary, ...args) {
+    let temp = Array.prototype.slice.apply(...args)
+    let result = []
+    for (let item of ary) {
+      if (!temp.includes(item)) {
+        result.push(item)
+      }
+    }
+    return result
+  },
   drop: function (array, n = 1) {
     if (array.length <= n) {
       return []
@@ -128,6 +138,31 @@ var xstars = {
   flip: function (func) {
     return function (...args) {
       return func(...args.reverse())
+    }
+  },
+  negate: function (func) {
+    return function (...args) {
+      return !func(...args)
+    }
+  },
+  spread: function (func) {
+    return function (ary) {
+      return func(...ary)
+    }
+  },
+  bind: function (f, ...fixedArgs) {
+    return function bound(...args) {
+      var copy = fixedArgs.slice()
+      var j = 0
+      for (let i = 0; i < copy.length; i++) {
+        if (copy[i] === null) {
+          copy[i] = args[j++]
+        }
+      }
+      while (j < args.length) {
+        copy.push(args[j++])
+      }
+      return f(...copy)
     }
   }
 }
