@@ -96,4 +96,21 @@ var xstars = {
   flattenDeep: function (array) {
     return array.flat(Infinity)
   },
+  pairs: function (array) {
+    var result = {}
+    for (let i = 0; i < array.length; i++) {
+      return result[array[i][0]] = array[i][1]
+    }
+  },
+  before: function (n, func) {
+    var i = 0
+    var result
+    return function (...args) {
+      if (i < n) {
+        i++
+        result = func(...args)
+      }
+      return result
+    }
+  },
 }
