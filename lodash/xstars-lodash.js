@@ -106,7 +106,7 @@ var xstars = {
     var i = 0
     var result
     return function (...args) {
-      if (i < n) {
+      if (i <= n) {
         i++
         result = func(...args)
       }
