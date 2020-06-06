@@ -100,9 +100,24 @@ var xstars = {
     array.length = array.length - 1
     return array
   },
+  // flatten: function (array) {
+  //   return Array.prototype.concat.apply([], array)
+  // },
   flatten: function (array) {
-    return Array.prototype.concat.apply([], array)
+    var result = []
+    for (let i = 0; i < array.length; i++) {
+      var item = array[i];
+      if (Array.isArray(item)) {
+        for (let j = 0; j < array.length; j++) {
+          result.push(item[j])
+        }
+      } else {
+        result.push(item)
+      }
+    }
+    return result
   },
+
   flattenDeep: function (array) {
     return array.flat(Infinity)
   },
