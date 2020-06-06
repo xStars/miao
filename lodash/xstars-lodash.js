@@ -99,8 +99,9 @@ var xstars = {
   pairs: function (array) {
     var result = {}
     for (let i = 0; i < array.length; i++) {
-      return result[array[i][0]] = array[i][1]
+      result[array[i][0]] = array[i][1]
     }
+    return result
   },
   after: function (n, func) {
     var i = 0
@@ -124,4 +125,9 @@ var xstars = {
       return result
     }
   },
+  flip: function (func) {
+    return function (...args) {
+      return func(...args.reverse())
+    }
+  }
 }
