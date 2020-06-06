@@ -102,6 +102,17 @@ var xstars = {
       return result[array[i][0]] = array[i][1]
     }
   },
+  after: function (n, func) {
+    var i = 0
+    var result
+    return function () {
+      i++
+      if (i <= n) {
+        return result
+      }
+      return func(...args)
+    }
+  },
   before: function (n, func) {
     var i = 0
     var result
