@@ -105,10 +105,10 @@ var xstars = {
   // },
   flatten: function (array) {
     var result = []
-    for (let i = 0; i < array.length; i++) {
+    for (var i = 0; i < array.length; i++) {
       var item = array[i];
       if (Array.isArray(item)) {
-        for (let j = 0; j < array.length; j++) {
+        for (var j = 0; j < array.length; j++) {
           result.push(item[j])
         }
       } else {
