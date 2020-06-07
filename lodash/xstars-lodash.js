@@ -115,10 +115,24 @@ var xstars = {
     }
     return result
   },
+  //flatten reduce方法
+  flatten2: function (array) {
+    return array.reduce((result, item) => {
+      if (Array.isArray(item)) {
+        result.push(...item)
+      } else {
+        result.push(item)
+      }
+      return result
+    }, [])
+  },
+
 
   flattenDeep: function (array) {
     return array.flat(Infinity)
   },
+  // fla
+
   pairs: function (array) {
     var result = {}
     for (let i = 0; i < array.length; i++) {
@@ -126,17 +140,17 @@ var xstars = {
     }
     return result
   },
-  after: function (n, func) {
-    var i = 0
-    var result
-    return function () {
-      i++
-      if (i <= n) {
-        return result
-      }
-      return func(...args)
-    }
-  },
+  // after: function (n, func) {
+  //   var i = 0
+  //   var result
+  //   return function () {
+  //     i++
+  //     if (i <= n) {
+  //       return result
+  //     }
+  //     return func(...args)
+  //   }
+  // },
   before: function (n, func) {
     var i = 0
     var result
