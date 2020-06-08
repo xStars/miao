@@ -140,33 +140,46 @@ var xstars = {
     }
     return result
   },
-  // after: function (n, func) {
-  //   var i = 0
-  //   var result
-  //   return function () {
-  //     i++
-  //     if (i <= n) {
-  //       return result
-  //     }
-  //     return func(...args)
-  //   }
-  // },
-  // before: function (n, func) {
-  //   var i = 0
-  //   var result
-  //   return function (...args) {
-  //     if (i <= n) {
-  //       i++
-  //       result = func(...args)
-  //     }
-  //     return result
-  //   }
-  // },
-  //   flip: function (func) {
-  //     return function (...args) {
-  //       return func(...args.reverse())
-  //     }
-  //   },
+  before: function (n, func) {
+    var i = 0
+    var result
+    return function (...args) {
+      if (i < n) {
+        i++
+        result = func(...args)
+      }
+      return result
+    }
+  },
+  after: function (n, func) {
+    var i = 0
+    return function (...args) {
+      if (i > n) {
+        i++
+        return func(...args)
+      }
+    }
+  },
+  ary: function (func, n = func.length) {
+    return function (...args) {
+      return func(...arg.slice(0, n))
+    }
+  },
+  unary: function (func) {
+    return function (arg) {
+      return func(arg)
+    }
+  },
+  flip: function (func) {
+    return function (...args) {
+      return func(...args.reverse())
+    }
+  },
+  negate: function (func) {
+    return function (...args) {
+      return !func(...args)
+    }
+  }
   //   negate: function (func) {
   //     return function (...args) {
   //       return !func(...args)
