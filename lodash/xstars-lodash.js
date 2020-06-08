@@ -179,30 +179,66 @@ var xstars = {
     return function (...args) {
       return !func(...args)
     }
+  },
+  reject: function (ary, test) {
+    var result = []
+    for (var i = 0; i < arg.length; i++) {
+      if (!test(ary[i])) {
+        result.push(ary[i])
+      }
+    }
+  },
+  spread: function (func) {
+    return function (ary) {
+      return func(...ary)
+    }
+  },
+  bind: function (func, ...fixedArgs) {
+    return function (...fixedArgs) {
+      var copy = fixedArgs.slice()
+      var j = 0
+      for (let i = 0; i < copy.length; i++) {
+        if (copy[i] === null) {
+          copy[i] = args[j++]
+        }
+      }
+      while (j < args.length) {
+        copy.push(args[j++])
+      }
+      return f(...copy)
+    }
+  },
+  filter: function (ary, predicate) {
+    var test = predicate
+    if (typeof predicate === "string") {
+      test = it => it[predicate]
+    } else if (typeof predicate === 'Object') {
+      if (Array.isArray(predicate)) {
+        predicate = fromParirs(predicate)
+      }
+      test = (it) => {
+        for (var key in predicate) {
+          if (predicate[key] !== it[key]) {
+            return false
+          }
+        }
+      }
+    }
+    return false
+  },
+  property: function (str) {
+    return function (obj) {
+      return obj[str]
+    }
+  },
+  matches: function (trager) {
+    return function (obj) {
+      for (var key in trager) {
+        if (obj[key] !== trager[key]) {
+          return false
+        }
+      }
+      return true
+    }
   }
-  //   negate: function (func) {
-  //     return function (...args) {
-  //       return !func(...args)
-  //     }
-  //   },
-  //   spread: function (func) {
-  //     return function (ary) {
-  //       return func(...ary)
-  //     }
-  //   },
-  //   bind: function (f, ...fixedArgs) {
-  //     return function bound(...args) {
-  //       var copy = fixedArgs.slice()
-  //       var j = 0
-  //       for (let i = 0; i < copy.length; i++) {
-  //         if (copy[i] === null) {
-  //           copy[i] = args[j++]
-  //         }
-  //       }
-  //       while (j < args.length) {
-  //         copy.push(args[j++])
-  //       }
-  //       return f(...copy)
-  //     }
-  //   }
 }
