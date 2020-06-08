@@ -162,7 +162,7 @@ var xstars = {
   },
   ary: function (func, n = func.length) {
     return function (...args) {
-      return func(...arg.slice(0, n))
+      return func(...args.slice(0, n))
     }
   },
   unary: function (func) {
