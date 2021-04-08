@@ -41,7 +41,7 @@ var xstars = {
   },
   flip: function (func) {
     return (...args) => {
-      return func(...args.recerse())
+      return func(...args.reverse())
     }
   }
 }
