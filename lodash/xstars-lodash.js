@@ -26,5 +26,18 @@ var xstars = {
       }
       return result
     }
+  },
+  bind: function bind(func, ...thisArgs) {
+    let copy = this.slice()
+    let i = 0
+    return (...args) => {
+      copy.forEach((item, idx, ary) => {
+        if (item == null) {
+          ary[idx] = args[i++]
+        }
+      })
+      return func(...copy, ...args.slice(i))
+    }
+
   }
 }
