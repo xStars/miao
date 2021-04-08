@@ -48,5 +48,8 @@ var xstars = {
     return (...args) => {
       return !predicate(...args)
     }
+  },
+  once: function once(func) {
+    return this.before(func, 1)
   }
 }
