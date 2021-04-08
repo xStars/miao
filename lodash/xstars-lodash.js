@@ -21,7 +21,7 @@ var xstars = {
     let i = 0
     let result
     return (...args) => {
-      if (i++ <= n) {
+      if (i++ < n) {
         result = fuc(...args)
       }
       return result
@@ -50,7 +50,14 @@ var xstars = {
     }
   },
   once: function once(func) {
-    return this.before(func, 1)
+    let i = 0
+    let result
+    return (...args) => {
+      if (i++ < 1) {
+        result = fuc(...args)
+      }
+      return result
+    }
   },
   unary: function unary(func) {
     return (arg) => func(arg)
