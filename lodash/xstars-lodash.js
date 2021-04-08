@@ -11,5 +11,10 @@ var xstars = {
     return (...args) => {
       return func(...args.slice(0, n))
     }
+  },
+  unary: function (func) {
+    return (arg) => {
+      return func(arg)
+    }
   }
 }
