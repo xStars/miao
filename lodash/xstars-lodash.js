@@ -16,5 +16,15 @@ var xstars = {
     return (arg) => {
       return func(arg)
     }
+  },
+  before: function (n, func) {
+    let i = 0
+    let result
+    return (...args) => {
+      if (i++ <= n) {
+        result = fuc(...args)
+      }
+      return result
+    }
   }
 }
