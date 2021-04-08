@@ -54,7 +54,7 @@ var xstars = {
     let result
     return (...args) => {
       if (i++ < 1) {
-        result = fuc(...args)
+        result = func(...args)
       }
       return result
     }
