@@ -51,5 +51,8 @@ var xstars = {
   },
   once: function once(func) {
     return this.before(func, 1)
+  },
+  unary: function unary(func) {
+    return (arg) => func(arg)
   }
 }
