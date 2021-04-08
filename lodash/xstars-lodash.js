@@ -38,5 +38,10 @@ var xstars = {
       })
       return func(...copy, ...args.slice(i))
     }
+  },
+  flip: function (func) {
+    return (...args) => {
+      return func(...args.recerse())
+    }
   }
 }
