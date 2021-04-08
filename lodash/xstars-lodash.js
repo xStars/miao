@@ -9,9 +9,7 @@ var xstars = {
   },
   ary: function (func, n = func.length) {
     return (...args) => {
-      let limitArgs
-      args.length > n ? limitArgs = args.slice(0, n) : limitArgs = args
-      return func(...limitArgs)
+      return func(...args.slice(0, n))
     }
   }
 }
