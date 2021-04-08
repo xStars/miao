@@ -27,7 +27,7 @@ var xstars = {
       return result
     }
   },
-  bind: function bind(func, ...thisArgs) {
+  bind: function (func, ...thisArgs) {
     let copy = this.slice()
     let i = 0
     return (...args) => {
