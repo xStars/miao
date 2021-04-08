@@ -43,5 +43,10 @@ var xstars = {
     return (...args) => {
       return func(...args.reverse())
     }
+  },
+  negate: function (predicate) {
+    return (...args) => {
+      return !predicate(...args)
+    }
   }
 }
