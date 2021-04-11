@@ -141,4 +141,7 @@ var xstars = {
     })
     return result
   },
+  drop: function drop(ary, n = 1) {
+    return ary.slice(n)
+  }
 }
