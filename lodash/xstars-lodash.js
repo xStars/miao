@@ -76,6 +76,19 @@ var xstars = {
     }
     return result
   },
+  compact: function compact(ary) {
+    return ary.reduce((result, current) => {
+      if (current !== false && current !== null &&
+        current !== 0 && current !== '' &&
+        current !== undefined && current !== NaN) {
+        result.push(current)
+      }
+      return result
+    }, [])
+  },
+  concat: function concat(ary, ...value) {
+    return [...ary, ...value]
+  },
   fromPairs: function fromPairs(ary) {
     let result = {}
     for (let i = 0; i < ary.length; i += 2) {
