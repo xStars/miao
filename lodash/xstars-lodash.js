@@ -87,7 +87,15 @@ var xstars = {
     }, [])
   },
   concat: function concat(ary, ...value) {
-    return [...ary, ...value]
+    let result = ary
+    value.forEach(it => {
+      if (Array.isArray(it)) {
+        result.push(...it)
+      } else {
+        result.push(it)
+      }
+    })
+    return result
   },
   fromPairs: function fromPairs(ary) {
     let result = {}
