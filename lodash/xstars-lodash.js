@@ -78,7 +78,7 @@ var xstars = {
   },
   compact: function compact(ary) {
     return ary.reduce((result, current) => {
-      if (current) {
+      if (current || current == 0) {
         result.push(current)
       }
       return result
