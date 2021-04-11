@@ -78,9 +78,7 @@ var xstars = {
   },
   compact: function compact(ary) {
     return ary.reduce((result, current) => {
-      if (current !== false && current !== null &&
-        current !== 0 && current !== '' &&
-        current !== undefined && isNaN(NaN)) {
+      if (current) {
         result.push(current)
       }
       return result
@@ -129,5 +127,13 @@ var xstars = {
       }
     }
     return result
+  },
+  difference: function difference(ary, value) {
+    let copy = ary.slice()
+    if (value) {
+      value.map((it, idx, ary) => {
+
+      })
+    }
   }
 }
