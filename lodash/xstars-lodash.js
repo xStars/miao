@@ -61,5 +61,42 @@ var xstars = {
   },
   unary: function unary(func) {
     return (arg) => func(arg)
+  },
+  spread: function spread(func) {
+    return (args) => {
+      return func(...args)
+    }
+  },
+  fromPairs: function fromPairs(ary) {
+    let result = {}
+    for (let i = 0; i < ary.length; i += 2) {
+      result[ary[i]] = ary[i + 1]
+    }
+    return result
+  },
+  filter: function filter(ary, predicate) {
+    let test = predicate
+    if (typeof predicate == 'string') {
+      test = it => it[predicate]
+    } else if (typeof predicate == 'object') { //{active: true, gender: 'f'} or ['activc',true,'gender','f']
+      if (Array.isArray(predicate)) {
+        predicate = formPairs(predicate)
+      }
+      test = it => {
+        for (let key in it) {
+          if (predicate[key] !== it[key]) {
+            return false
+          }
+        }
+        return true
+      }
+    }
+    let result = []
+    for (let i = 0; i < ary.length; i++) {
+      if (test(ary[i], i, ary)) {
+        result.push(ary[i])
+      }
+    }
+    return result
   }
 }
