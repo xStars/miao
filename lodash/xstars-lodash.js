@@ -129,11 +129,16 @@ var xstars = {
     return result
   },
   difference: function difference(ary, value) {
-    let copy = ary.slice()
-    if (value) {
-      value.map((it, idx, ary) => {
-
-      })
-    }
-  }
+    let set = {}
+    let result = []
+    value.forEach((value, idx, ary) => {
+      set[value] = true
+    })
+    ary.forEach((key, idx, ary) => {
+      if (!set[key]) {
+        result.push(key)
+      }
+    })
+    return result
+  },
 }
