@@ -80,7 +80,7 @@ var xstars = {
     return ary.reduce((result, current) => {
       if (current !== false && current !== null &&
         current !== 0 && current !== '' &&
-        current !== undefined && current !== NaN) {
+        current !== undefined && !isNaN(NaN)) {
         result.push(current)
       }
       return result
