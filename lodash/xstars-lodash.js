@@ -67,6 +67,15 @@ var xstars = {
       return func(...args)
     }
   },
+  chunk: function chunk(ary, size = 1) {
+    let result = []
+    let n = Math.ceil(ary.length / size)
+    for (let i = 0; i < n; i++) {
+      let start = i * size
+      result[i] = ary.slice(start, start + size)
+    }
+    return result
+  },
   fromPairs: function fromPairs(ary) {
     let result = {}
     for (let i = 0; i < ary.length; i += 2) {
@@ -78,7 +87,8 @@ var xstars = {
     let test = predicate
     if (typeof predicate == 'string') {
       test = it => it[predicate]
-    } else if (typeof predicate == 'object') { //{active: true, gender: 'f'} or ['activc',true,'gender','f']
+    } else if (typeof predicate == 'object') {
+      //{active: true, gender: 'f'} or ['activc',true,'gender','f']
       if (Array.isArray(predicate)) {
         predicate = formPairs(predicate)
       }
