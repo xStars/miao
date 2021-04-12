@@ -222,7 +222,7 @@ var xstars = {
       }
     })
     ary.forEach((item) => {
-      if (set[item]) {
+      if (!set[item]) {
         result.push(item)
       }
     })
