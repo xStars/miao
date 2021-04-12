@@ -165,7 +165,7 @@ var xstars = {
     let result = []
     ary.forEach((item, idx, ary) => {
       if (Array.isArray(item)) {
-        result.concat(flattenDeep(item))
+        result.push(...flattenDeep(item))
       } else {
         result.push(item)
       }
