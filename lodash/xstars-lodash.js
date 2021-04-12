@@ -237,6 +237,9 @@ var xstars = {
       }
       return result
     }, '')
+  },
+  last: function last(ary) {
+    return ary[ary.length - 1]
   }
 
 }
