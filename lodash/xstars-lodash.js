@@ -241,6 +241,15 @@ var xstars = {
   },
   last: function last(ary) {
     return ary[ary.length - 1]
+  },
+  lastIndexOf: function lastIndexOf(ary, value, fromIndex = ary.length - 1) {
+    for (let i = fromIndex; i >= 0; i--) {
+      let current = ary[i]
+      if (current == value) {
+        return i
+      }
+    }
   }
+
 
 }
