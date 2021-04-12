@@ -172,8 +172,19 @@ var xstars = {
     })
     return result
   },
-  flattenDepth: function flattenDepth(ary, size = 1) {
+  flattenDepth: function flattenDepth(ary, depth = 1) {
+    if (depth == 0) {
+      return ary.slice()
+    }
     let result = []
+    ary.forEach((item) => {
+      if (Array.isArray(item)) {
+        result.push(...flattenDepth(item, depth - 1))
+      } else {
+        result.push(item)
+      }
+    })
+    return result
 
   }
 }
