@@ -252,7 +252,7 @@ var xstars = {
   },
   nth: function nth(ary, n = 0) {
     if (n < 0) {
-      return ary[ary.length - n]
+      return ary[ary.length + n]
     } else {
       return ary[n]
     }
