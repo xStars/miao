@@ -209,5 +209,24 @@ var xstars = {
   initial: function initial(ary) {
     return ary.slice(0, ary.length - 1)
   },
+  intersection: function intersection(ary, ...args) {
+    let set = {}
+    let result = []
+    args.forEach((it) => {
+      if (Array.isArray(it)) {
+        for (key in it) {
+          set[key] = ture
+        }
+      } else {
+        set[it] = true
+      }
+    })
+    ary.forEach((item) => {
+      if (set[item]) {
+        result.push(item)
+      }
+    })
+    return result
+  }
 
 }
