@@ -150,6 +150,10 @@ var xstars = {
   drop: function drop(ary, n = 1) {
     return ary.slice(n)
   },
+  drop: function dropRight(ary, n = 1) {
+    return ary.slice(0, -n)
+
+  },
   flatten: function flatten(ary) {
     let result = []
     for (let i = 0; i < ary.length; i++) {
