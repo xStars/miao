@@ -248,6 +248,7 @@ var xstars = {
         return i
       }
     }
+    return -1
   }
 
 
