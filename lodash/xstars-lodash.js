@@ -160,5 +160,16 @@ var xstars = {
       }
     }
     return result
+  },
+  flattenDeep: function flattenDeep(ary) {
+    let result = []
+    ary.forEach((item, idx, ary) => {
+      if (Array.isArray(item)) {
+        result.concat(flattenDeep(item))
+      } else {
+        result.push(item)
+      }
+    })
+    return result
   }
 }
