@@ -270,7 +270,7 @@ var xstars = {
       }
     } else {
       for (let i = ary.length; i >= 0; i--) {
-        if (ary[i] == value) {
+        if (ary[i] == values) {
           ary.splice(i, 1)
           i--
         }
