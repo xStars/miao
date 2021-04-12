@@ -190,5 +190,11 @@ var xstars = {
     return result
 
   },
+  fill: function fill(ary, value, start = 0, end = ary.length) {
+    for (let i = start; i < end; i++) {
+      ary[i] = value
+    }
+    return ary
+  },
 
 }
