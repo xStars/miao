@@ -199,5 +199,12 @@ var xstars = {
   head: function head(ary) {
     return ary[0]
   },
+  indexOf: function indexOf(ary, value, formIndex = 0) {
+    for (let i = fromIndex; i < ary.length; i++) {
+      if (ary[i] == value) {
+        return i
+      }
+    }
+  }
 
 }
