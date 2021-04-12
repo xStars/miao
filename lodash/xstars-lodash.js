@@ -205,6 +205,9 @@ var xstars = {
         return i
       }
     }
+  },
+  initial: function initial(ary) {
+    return ary.slice(0, ary.length - 1)
   }
 
 }
