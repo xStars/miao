@@ -151,7 +151,7 @@ var xstars = {
     return ary.slice(n)
   },
   dropRight: function dropRight(ary, n = 1) {
-    return ary.slice(0, -n)
+    return n == 0 ? ary.sclice() : ary.slice(0, -n)
 
   },
   flatten: function flatten(ary) {
