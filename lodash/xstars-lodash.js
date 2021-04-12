@@ -215,7 +215,7 @@ var xstars = {
     args.forEach((it) => {
       if (Array.isArray(it)) {
         for (key in it) {
-          set[key] = ture
+          set[key] = true
         }
       } else {
         set[it] = true
