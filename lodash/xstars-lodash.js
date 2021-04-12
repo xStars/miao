@@ -229,7 +229,7 @@ var xstars = {
     return result
   },
   join: function join(ary, separator = ',') {
-    let str = toString(separator)
+    let str = separator.toString()
     return ary.reduce((result, current, idx, ary) => {
       if (idx == ary.length - 1) {
         result += current
