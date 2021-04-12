@@ -150,7 +150,7 @@ var xstars = {
   drop: function drop(ary, n = 1) {
     return ary.slice(n)
   },
-  drop: function dropRight(ary, n = 1) {
+  dropRight: function dropRight(ary, n = 1) {
     return ary.slice(0, -n)
 
   },
