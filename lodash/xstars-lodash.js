@@ -227,6 +227,16 @@ var xstars = {
       }
     })
     return result
+  },
+  join: function join(ary, separator = ',') {
+    return ary.reduce((result, current, idx, ary) => {
+      if (idx == ary.length - 1) {
+        result += current
+      } else {
+        result += current + separator
+      }
+      return result
+    }, '')
   }
 
 }
