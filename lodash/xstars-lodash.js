@@ -234,7 +234,7 @@ var xstars = {
       if (idx == ary.length - 1) {
         result += current
       } else {
-        result += current + separator
+        result += current + str
       }
       return result
     }, '')
@@ -244,8 +244,7 @@ var xstars = {
   },
   lastIndexOf: function lastIndexOf(ary, value, fromIndex = ary.length - 1) {
     for (let i = fromIndex; i >= 0; i--) {
-      let current = ary[i]
-      if (current == value) {
+      if (ary[i] == value) {
         return i
       }
     }
