@@ -258,7 +258,7 @@ var xstars = {
     }
   },
   pull: function pull(ary, values) {
-    for (let i = ary.length - 1; i >= 0; i++) {
+    for (let i = ary.length - 1; i >= 0; i--) {
       if (Array.isArray(values)) {
         for (let j = 0; j < values.length; j++) {
           if (ary[i] == values[j]) {
