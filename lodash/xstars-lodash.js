@@ -197,7 +197,7 @@ var xstars = {
     return ary
   },
   head: function head(ary) {
-    return ary[1]
-  }
+    return ary[0]
+  },
 
 }
