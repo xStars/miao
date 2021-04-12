@@ -256,6 +256,24 @@ var xstars = {
     } else {
       return ary[n]
     }
+  },
+  pull: function pull(ary, values) {
+    for (let i = ary.length - 1; i >= 0; i++) {
+      if (Array.isArray(values)) {
+        for (let j = 0; j < values.length; j++) {
+          if (ary[i] == values[j]) {
+            ary.splice(i, 1)
+            i--
+          }
+        }
+      } else {
+        if (ary[i] == values) {
+          ary.splice(i, 1)
+          i--
+        }
+      }
+    }
+    return ary
   }
 
 
