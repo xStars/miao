@@ -171,5 +171,9 @@ var xstars = {
       }
     })
     return result
+  },
+  flattenDepth: function flattenDepth(ary, size = 1) {
+    let result = []
+
   }
 }
