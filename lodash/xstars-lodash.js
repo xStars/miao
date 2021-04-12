@@ -128,13 +128,19 @@ var xstars = {
     }
     return result
   },
-  difference: function difference(ary, value) {
+  difference: function difference(ary, ...value) {
     let set = {}
     let result = []
     value.forEach((value, idx, ary) => {
-      set[value] = true
+      if (Array.isArray(value)) {
+        for (let i = 0; i < value.length; i++) {
+          set[value[i]] = true
+        }
+      } else {
+        set[value] = true
+      }
     })
-    ary.forEach((key, idx, ary) => {
+    ary.forEach((key) => {
       if (!set[key]) {
         result.push(key)
       }
@@ -143,5 +149,16 @@ var xstars = {
   },
   drop: function drop(ary, n = 1) {
     return ary.slice(n)
+  },
+  flatten: function flatten(ary) {
+    let result = []
+    for (let i = 0; i < ary.length; i++) {
+      if (Array.isArray(ary[i])) {
+        result.push(...ary[i])
+      } else {
+        result.push(ary[i])
+      }
+    }
+    return result
   }
 }
