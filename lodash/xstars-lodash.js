@@ -257,24 +257,27 @@ var xstars = {
       return ary[n]
     }
   },
-  pull: function pull(ary, values) {
-    for (let i = ary.length - 1; i >= 0; i--) {
-      if (Array.isArray(values)) {
-        for (let j = 0; j < values.length; j++) {
-          if (ary[i] == values[j]) {
+  pull: function pull(ary, ...values) {
+    if (Array.isArray(values)) {
+      for (let j = 0; j < values.length; j++) {
+        let value = values[j]
+        for (let i = ary.length; i >= 0; i--) {
+          if (ary[i] == value) {
             ary.splice(i, 1)
             i--
           }
         }
-      } else {
-        if (ary[i] == values) {
+      }
+    } else {
+      for (let i = ary.length; i >= 0; i--) {
+        if (ary[i] == value) {
           ary.splice(i, 1)
           i--
         }
       }
     }
-    return ary
   }
+}
 
 
 }
