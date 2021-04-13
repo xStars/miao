@@ -308,24 +308,23 @@ var xstars = {
     }
     return ary.length
   },
-  union: function union(...ary) {
+  uniq: function uniq(ary) {
     let set = {}
     let result = []
-    for (let i = 0; i < ary.length; i++) {
-      let current = ary[i]
-      for (let key in current) {
-        if (!(set[key])) {
-          set[key] = 0
-        }
-        set[key]++
+    for (let value of ary) {
+      if (!(value in set)) {
+        set[value] = 0
       }
+      set[value]++
     }
-    for (let key in set) {
-      if (set[key] == 1) {
-        result.push(Number(key))
+
+    for (let i = 0; i < ary.length; i++) {
+      let value = ary[i]
+      if (set[value]) {
+        result.push(value)
+        delete set[value]
       }
     }
     return result
   }
-
 }
