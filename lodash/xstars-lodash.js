@@ -365,6 +365,11 @@ var xstars = {
     return true
   },
   size: function size(collection) {
-    return collection.length
+    if (Array.isArray(collection) && typeof collection == 'string') {
+      return collection.length
+    } else {
+      let arr = Object.keys(collection)
+      return arr.length
+    }
   }
 }
