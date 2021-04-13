@@ -277,6 +277,18 @@ var xstars = {
       }
     }
     return ary
+  },
+  pullAll: function pullAll(ary, values) {
+    for (let j = 0; j < values.length; j++) {
+      let value = values[j]
+      for (let i = ary.length - 1; i >= 0; i--) {
+        if (ary[i] == value) {
+          ary.splice(i, 1)
+          i--
+        }
+      }
+    }
+    return ary
   }
 
 }
