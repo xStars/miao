@@ -354,5 +354,14 @@ var xstars = {
       }
     }
     return result
+  },
+  every: function every(ary, predicate) {
+    for (let index = 0; index < ary.length; index++) {
+      const element = ary[index];
+      if (!(predicate(element))) {
+        return false
+      }
+    }
+    return true
   }
 }
