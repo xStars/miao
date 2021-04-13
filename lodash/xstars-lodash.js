@@ -326,5 +326,8 @@ var xstars = {
       }
     }
     return result
+  },
+  tail: function tail(ary) {
+    return ary.slice(1)
   }
 }
