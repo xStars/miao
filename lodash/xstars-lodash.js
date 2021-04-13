@@ -347,9 +347,10 @@ var xstars = {
         set[item] = true
       }
     }
-    for (let value of value) {
-      if (!(set[value])) {
-        result.push(value)
+    for (let i = 0; i < values.length; i++) {
+      let current = values[i]
+      if (!(set[current])) {
+        result.push(current)
       }
     }
     return ary
