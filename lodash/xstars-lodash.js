@@ -334,6 +334,16 @@ var xstars = {
     return ary.slice(0, n)
   },
   takeRight: function takeRight(ary, n = 1) {
+    if (n = 0) {
+      return ary.slice()
+    }
     return ary.slice(-n)
+  },
+  without: function without(ary, ...values) {
+    let set = {}
+    let resulr = []
+    ary.forEach(item => {
+
+    })
   }
 }
