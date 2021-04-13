@@ -334,7 +334,7 @@ var xstars = {
     return ary.slice(0, n)
   },
   takeRight: function takeRight(ary, n = 1) {
-    if (n = 0) {
+    if (n == 0) {
       return ary.slice()
     }
     return ary.slice(-n)
