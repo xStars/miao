@@ -341,9 +341,17 @@ var xstars = {
   },
   without: function without(ary, ...values) {
     let set = {}
-    let resulr = []
-    ary.forEach(item => {
-
-    })
+    let result = []
+    for (let item of ary) {
+      if (!(set[item])) {
+        set[item] = true
+      }
+    }
+    for (let value of value) {
+      if (!(set[value])) {
+        result.push(value)
+      }
+    }
+    return ary
   }
 }
