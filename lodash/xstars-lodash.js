@@ -371,5 +371,12 @@ var xstars = {
       let arr = Object.keys(collection)
       return arr.length
     }
+  },
+  isBoolaen: function isBoolaen(value) {
+    if (value === true) {
+      return true
+    } else {
+      return false
+    }
   }
 }
