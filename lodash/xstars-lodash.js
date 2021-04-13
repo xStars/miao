@@ -302,7 +302,7 @@ var xstars = {
   },
   sortedIndex: function sortedIndex(ary, value) {
     for (let i = 0; i < ary.length; i++) {
-      if (value < ary[i]) {
+      if (ary[i] < value) {
         return i == 0 ? 0 : --i
       }
     }
