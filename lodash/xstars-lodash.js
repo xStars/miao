@@ -353,6 +353,6 @@ var xstars = {
         result.push(current)
       }
     }
-    return ary
+    return result
   }
 }
