@@ -329,5 +329,8 @@ var xstars = {
   },
   tail: function tail(ary) {
     return ary.slice(1)
+  },
+  take: function take(ary, n = 1) {
+    return ary.slice(0, n)
   }
 }
