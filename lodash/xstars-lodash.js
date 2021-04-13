@@ -342,13 +342,13 @@ var xstars = {
   without: function without(ary, ...values) {
     let set = {}
     let result = []
-    for (let item of ary) {
+    for (let item of values) {
       if (!(set[item])) {
         set[item] = true
       }
     }
-    for (let i = 0; i < values.length; i++) {
-      let current = values[i]
+    for (let i = 0; i < ary.length; i++) {
+      let current = ary[i]
       if (!(set[current])) {
         result.push(current)
       }
