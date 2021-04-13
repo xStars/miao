@@ -259,10 +259,10 @@ var xstars = {
   },
   pull: function pull(ary, ...values) {
     if (Array.isArray(values)) {
-      for (let j = 0; i < values.length; j++) {
+      for (let j = 0; j < values.length; j++) {
         let value = values[j]
         for (let i = ary.length - 1; i >= 0; i--) {
-          if (ary[i] = value) {
+          if (ary[i] == value) {
             ary.splice(i, 1)
             i--
           }
@@ -270,7 +270,7 @@ var xstars = {
       }
     } else {
       for (let i = ary.length - 1; i >= 0; i--) {
-        if (ary[i] = values) {
+        if (ary[i] == values) {
           ary.splice(i, 1)
           i--
         }
