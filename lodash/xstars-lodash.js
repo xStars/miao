@@ -289,6 +289,16 @@ var xstars = {
       }
     }
     return ary
+  },
+  reverse: function reverse(ary) {
+    let start = 0
+    let end = ary.length - 1
+    while (start < end) {
+      [ary[start], ary[end]] = [ary[end], ary[start]]
+      start++
+      end--
+    }
+    return ary
   }
 
 }
