@@ -307,6 +307,25 @@ var xstars = {
       }
     }
     return ary.length
+  },
+  union: function union(...ary) {
+    let set = {}
+    let result = []
+    for (let i = 0; i < ary.length; i++) {
+      let current = ary[i]
+      for (let key in current) {
+        if (!(set[key])) {
+          set[key] = 0
+        }
+        set[key]++
+      }
+    }
+    for (let key in set) {
+      if (set[key] == 1) {
+        result.push(Number(key))
+      }
+    }
+    return result
   }
 
 }
