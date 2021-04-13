@@ -363,5 +363,8 @@ var xstars = {
       }
     }
     return true
+  },
+  size: function size(collection) {
+    return collection.length
   }
 }
