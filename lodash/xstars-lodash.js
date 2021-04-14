@@ -410,6 +410,9 @@ var xstars = {
       return true
     }
   },
+  isMatch: function isMatch(obj, source) {
+
+  },
   matchesProperty: function matchesProperty(ary) {
     return this.matches(this.fromPairs(this.chunk(ary, 2)))
   }
