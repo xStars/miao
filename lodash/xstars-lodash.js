@@ -383,12 +383,27 @@ var xstars = {
     if (Array.isArray(collection)) {
       for (let i = 0; i < collection.length; i++) {
         let value = collection[i]
-        f(value, i)
+        return f(value, i)
       }
     } else {
       for (let key in collection) {
-        f(collection[key], key)
+        return f(collection[key], key)
       }
+    }
+  },
+  property: function property(str) {
+    return (obj) => {
+      return obj[str]
+    }
+  },
+  matches: function matches(target) {
+    return (obj) => {
+      for (const key of Object.keys(obj)) {
+        if (!(obj[key])) {
+          return false
+        }
+      }
+      return true
     }
   }
 }
