@@ -391,10 +391,14 @@ var xstars = {
       }
     }
   },
-  property: function property(str) {
-    return (obj) => {
-      return obj[str]
-    }
+  get: function get(obj, prop) {
+    return obj[prop]
+  },
+  property: function property(prop) {
+    return this.bind(null, _, prop)
+    // return (obj) => {
+    //   return obj[str]
+    // }
   },
   matches: function matches(target) {
     return (obj) => {
