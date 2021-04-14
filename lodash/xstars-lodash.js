@@ -398,12 +398,15 @@ var xstars = {
   },
   matches: function matches(target) {
     return (obj) => {
-      for (const key of Object.keys(obj)) {
-        if (!(obj[key])) {
+      for (let key in target) {
+        if (obj[key] !== target[key]) {
           return false
         }
       }
       return true
     }
+  },
+  matchesProperty: function matchesProperty(ary) {
+    return this.matches(this.fromPairs(this.chunk(ary, 2)))
   }
 }
