@@ -378,5 +378,17 @@ var xstars = {
     } else {
       return false
     }
+  },
+  forEach: function forEach(collection, f) {
+    if (Array.isArray(collection)) {
+      for (let i = 0; i < collection.length; i++) {
+        let value = collection[i]
+        f(value, i)
+      }
+    } else {
+      for (let key in collection) {
+        f(collection[key], key)
+      }
+    }
   }
 }
